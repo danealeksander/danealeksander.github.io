@@ -1,2 +1,6 @@
 # danealeksander.github.io
-Dane Aleksander
+Official website of Dane Aleksander designed and developed by Dane Aleksander with GitHub Pages and Google Fonts.
+Font(s): “Oswald” [Extra-Light, Medium] principally designed by Vernon Adams, licensed under the SIL Open Font License 1.1.
+
+# lifeasplay.ca/dane/
+Art is copyrighted © 2011-2018 by Dane Aleksander. https://danealeksander.github.io/c/

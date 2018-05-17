@@ -1,0 +1,226 @@
+/* CSS Document */
+/* Alternative colors for Dark, Light, One by Dane Aleksander. */
+
+/*********************************/
+/* Alt *//* colors [UNICORN] */
+
+.trim {
+  border:#0A0A0A thin solid;
+}
+
+/***********************************************/
+/* Alt.1 *//*** PURPLE ***//* rgb(159,0,159) */
+
+#purple nav em,
+#purple a.color,
+#purple .navigation a,
+#purple h1,
+#purple h3,
+#purple h2.color,
+#purple h4.color,
+#purple font.color,
+.purple,
+li.purple a:active,
+li.purple a:hover {
+  color:#9F009F;
+}
+#purple a.color:hover,
+#purple a:hover .color,
+#purple .navigation a:hover,
+a.purple:hover,
+a:hover .purple {
+  color:#810281;
+}
+html #purple,
+#purple nav,
+#purple article,
+#purple aside,
+#purple .color div.color {
+  background:#0A0A0A;
+}
+#purple div.color,
+#purple aside.color {
+  background:#2F072F;
+}
+#purple button,
+#purple a:hover > div.color,
+#purple #soci a img,
+div.purple {
+  background:#460646;
+}
+#purple button:hover,
+div.purple:hover {
+  background:#630463;
+}
+#purple pre.thin {
+  border:#2F072F thin solid;
+}
+nav ul li.purple {
+  border-color:#9F009F;
+}
+
+#purple::-webkit-scrollbar-track { background:#0A0A0A; }
+#purple::-webkit-scrollbar-thumb { background:#9F009F; }
+
+/*********************************************/
+/* Alt.2 *//*** PINK ***//* rgb(255,0,127) */
+
+#design nav em,
+#design a.color,
+#design .navigation a,
+#design h1,
+#design h3,
+#design h2.color,
+#design h4.color,
+#design font.color,
+.design,
+li.design a:active,
+li.design a:hover {
+  color:#FF007F;
+}
+#design a.color:hover,
+#design a:hover .color,
+#design .navigation a:hover,
+a.design:hover,
+a:hover .design {
+  color:#C30463;
+}
+html #design,
+#design nav,
+#design article,
+#design aside,
+#design .color div.color {
+  background:#111111;
+}
+#design div.color,
+#design aside.color {
+  background:#290F1C;
+}
+#design button,
+#design #soci a img,
+#design a:hover > div.color,
+div.design {
+  background:#4D0D2D;
+}
+#design button:hover,
+div.design:hover {
+  background:#880848;
+}
+#design pre.thin {
+  border:#290f1C thin solid;
+}
+nav ul li.design {
+  border-color:#FF007F;
+}
+
+#design::-webkit-scrollbar-track { background:#111111; }
+#design::-webkit-scrollbar-thumb { background:#FF007F; }
+
+/************************************************/
+/* Alt.3 *//*** ORANGE ***//* rgb(255,159,64) */
+
+#animate nav em,
+#animate a.color,
+#animate .navigation a,
+#animate h1,
+#animate h3,
+#animate h2.color,
+#animate h4.color,
+#animate font.color,
+.animate,
+li.animate a:active,
+li.animate a:hover {
+  color:#FF9F40;
+}
+#animate a.color:hover,
+#animate a:hover .color,
+#animate .navigation a:hover,
+a.animate:hover,
+a:hover .animate {
+  color:#C67E36;
+}
+html #animate,
+#animate nav,
+#animate article,
+#animate aside,
+#animate .color div.color {
+  background:#1A1A1A;
+}
+#animate div.color,
+#animate aside.color {
+  background:#31281E;
+}
+#animate button,
+#animate #soci a img,
+#animate a:hover > div.color,
+div.animate {
+  background:#533B24;
+}
+#animate button:hover,
+div.animate:hover {
+  background:#8D5D2D;
+}
+#animate pre.thin {
+  border:#31281E thin solid;
+}
+nav ul li.animate {
+  border-color:#FF9F40;
+}
+
+#animate::-webkit-scrollbar-track { background:#1A1A1A; }
+#animate::-webkit-scrollbar-thumb { background:#FF9F40; }
+
+/*************************************************/
+/* Alt.5 *//*** YELLOW ***//* rgb(255,239,191) */
+
+#illustrate nav em,
+#illustrate a.color,
+#illustrate .navigation a,
+#illustrate h1,
+#illustrate h3,
+#illustrate h2.color,
+#illustrate h4.color,
+#illustrate font.color,
+.illustrate,
+li.illustrate a:active,
+li.illustrate a:hover {
+  color:#FFEFBF;
+}
+#illustrate a.color:hover,
+#illustrate a:hover .color,
+#illustrate .navigation a:hover,
+a.illustrate:hover,
+a:hover .illustrate {
+  color:#CABE9A;
+}
+html #illustrate,
+#illustrate nav,
+#illustrate article,
+#illustrate aside,
+#illustrate .color div.color {
+  background:#2A2A2A;
+}
+#illustrate div.color,
+#illustrate aside.color {
+  background:#403E39;
+}
+#illustrate button,
+#illustrate #soci a img,
+#illustrate a:hover > div.color,
+div.illustrate {
+  background:#5F5B4F;
+}
+#illustrate button:hover,
+#illustrate .window:hover,
+div.illustrate:hover {
+  background:#958D75;
+}
+#illustrate pre.thin {
+  border:#403E39 thin solid;
+}
+nav ul li.illustrate {
+  border-color:#FFEFBF;
+}
+
+#illustrate::-webkit-scrollbar-track { background:#2A2A2A; }
+#illustrate::-webkit-scrollbar-thumb { background:#FFEFBF; }
