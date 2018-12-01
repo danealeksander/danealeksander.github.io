@@ -16,11 +16,7 @@
  * @version     2.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-wc_print_notices();
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 do_action( 'woocommerce_before_checkout_form', $checkout );
 
@@ -38,30 +34,27 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-		<div class="col2-set" id="customer_details">
-			<div class="col-1">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-			</div>
+		<div class="col2-set half left" id="customer_details">
+			<div class="clear col-1">
+				<?php do_action( 'woocommerce_checkout_billing' ); ?></div>
 
-			<div class="col-2">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
-		</div>
+			<div class="clear col-2">
+				<?php do_action( 'woocommerce_checkout_shipping' ); ?></div><br clear="all"></div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
 
-	<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
+	<div class="half right">
+		<h3 class="letterhead" id="order_review_heading"><?php _e( 'Your Order: ', 'woocommerce' ); ?></h3>
 
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-	</div>
+		<div id="order_review" class="clear woocommerce-checkout-review-order">
+			<?php do_action( 'woocommerce_checkout_order_review' ); ?></div>
 
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
-</form>
+		<?php wc_print_notices(); ?></div><br clear="all"></form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

@@ -16,16 +16,12 @@
  * @version     1.6.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! $messages ) {
-	return;
-}
+if ( ! $messages ) { return; } ?>
 
-?>
-
-<?php foreach ( $messages as $message ) : ?>
-	<div class="woocommerce-info"><?php echo wp_kses_post( $message ); ?></div>
-<?php endforeach; ?>
+<div class="color">
+	<ul class="woocommerce-info">
+		<?php foreach ( $messages as $message ) : ?>
+			<li><?php echo wp_kses_post( $message ); ?></li>
+		<?php endforeach; ?></ul></div>

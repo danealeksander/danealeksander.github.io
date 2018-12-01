@@ -16,9 +16,7 @@
  * @version     1.6.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 get_header( 'shop' ); ?>
 
@@ -32,30 +30,26 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<section class="single">
+		<div class="quote text-center">
+			<h1><a href="../" title="Animat Habitat&trade;" target="_self" ><font class="clear">ANIMAT</font> HABITAT</a><font class="trade"> &trade;</font></h1></div></section>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+	<?php while ( have_posts() ) : the_post(); wc_get_template_part( 'content', 'single-product' ); endwhile; // end of the loop.
 
-		<?php endwhile; // end of the loop. ?>
+	/**
+	 * woocommerce_after_main_content hook.
+	 *
+	 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+	 */
+	do_action( 'woocommerce_after_main_content' );
 
-	<?php
-		/**
-		 * woocommerce_after_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
+	/**
+	 * woocommerce_sidebar hook.
+	 *
+	 * @hooked woocommerce_get_sidebar - 10
+	 */
+	do_action( 'woocommerce_sidebar' );
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
-
-<?php get_footer( 'shop' );
+	get_footer( 'shop' );
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

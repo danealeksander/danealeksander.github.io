@@ -4,11 +4,15 @@
  *
  * Action/filter hooks used for WooCommerce functions/templates.
  *
- * @package WooCommerce/Templates
- * @version 2.1.0
+ * @author 		WooThemes
+ * @category 	Core
+ * @package 	WooCommerce/Templates
+ * @version     2.1.0
  */
 
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 add_filter( 'body_class', 'wc_body_class' );
 add_filter( 'post_class', 'wc_product_post_class', 20, 3 );
@@ -16,10 +20,10 @@ add_filter( 'post_class', 'wc_product_post_class', 20, 3 );
 /**
  * WP Header.
  *
- * @see wc_generator_tag()
+ * @see  wc_generator_tag()
  */
-add_filter( 'get_the_generator_html', 'wc_generator_tag', 10, 2 );
-add_filter( 'get_the_generator_xhtml', 'wc_generator_tag', 10, 2 );
+add_action( 'get_the_generator_html', 'wc_generator_tag', 10, 2 );
+add_action( 'get_the_generator_xhtml', 'wc_generator_tag', 10, 2 );
 
 /**
  * Content Wrappers.
@@ -50,8 +54,10 @@ add_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 )
  * Sidebar.
  *
  * @see woocommerce_get_sidebar()
+ * @see woocommerce_output_related_products()
  */
 add_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+// add_action( 'woocommerce_sidebar', 'woocommerce_output_related_products', 15 );
 
 /**
  * Archive descriptions.
@@ -61,11 +67,6 @@ add_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
  */
 add_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 add_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10 );
-
-/**
- * Product loop start.
- */
-add_filter( 'woocommerce_product_loop_start', 'woocommerce_maybe_show_product_subcategories' );
 
 /**
  * Products Loop.
@@ -93,7 +94,8 @@ add_action( 'woocommerce_no_products_found', 'wc_no_products_found' );
  */
 add_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
 add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
-add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+// add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price', 10 );
+// add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
 add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
 
@@ -101,8 +103,8 @@ add_action( 'woocommerce_before_subcategory', 'woocommerce_template_loop_categor
 add_action( 'woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10 );
 add_action( 'woocommerce_after_subcategory', 'woocommerce_template_loop_category_link_close', 10 );
 
-add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+// add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+// add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 
 /**
  * Subcategories.
@@ -128,8 +130,8 @@ add_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnai
  * @see woocommerce_output_related_products()
  */
 add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-add_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
-add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// add_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+// add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 /**
  * Product Summary Box.
@@ -142,7 +144,7 @@ add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_rela
  * @see woocommerce_template_single_sharing()
  */
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
@@ -209,11 +211,9 @@ add_action( 'woocommerce_product_additional_information', 'wc_display_product_at
  * @see woocommerce_checkout_payment()
  */
 add_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
-add_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+// add_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 add_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
 add_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
-add_action( 'woocommerce_checkout_terms_and_conditions', 'wc_checkout_privacy_policy_text', 20 );
-add_action( 'woocommerce_checkout_terms_and_conditions', 'wc_terms_and_conditions_page_content', 30 );
 
 /**
  * Cart widget
@@ -253,13 +253,6 @@ add_action( 'woocommerce_thankyou', 'woocommerce_order_details_table', 10 );
 add_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order_again_button' );
 
 /**
- * Order downloads.
- *
- * @see woocommerce_order_downloads_table()
- */
-add_action( 'woocommerce_available_downloads', 'woocommerce_order_downloads_table', 10 );
-
-/**
  * Auth.
  *
  * @see woocommerce_output_auth_header()
@@ -287,4 +280,3 @@ add_action( 'woocommerce_account_edit-address_endpoint', 'woocommerce_account_ed
 add_action( 'woocommerce_account_payment-methods_endpoint', 'woocommerce_account_payment_methods' );
 add_action( 'woocommerce_account_add-payment-method_endpoint', 'woocommerce_account_add_payment_method' );
 add_action( 'woocommerce_account_edit-account_endpoint', 'woocommerce_account_edit_account' );
-add_action( 'woocommerce_register_form', 'wc_registration_privacy_policy_text', 20 );

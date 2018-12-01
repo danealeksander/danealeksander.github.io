@@ -17,9 +17,7 @@
  * @see         woocommerce_breadcrumb()
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 if ( ! empty( $breadcrumb ) ) {
 
@@ -27,20 +25,15 @@ if ( ! empty( $breadcrumb ) ) {
 
 	foreach ( $breadcrumb as $key => $crumb ) {
 
-		echo $before;
+	if ( $crumb[0] == 'Home' ) {
+		echo '<li class="crumb zero logo"><a href="//animathabitat.org" title="Animat Habitat&trade;"><img alt="OAFA Mark (Light) &copy; Animat Habitat&trade;, 2015" class="logo" src="//animathabitat.com/inc/ico/oafa.light.svg" />' . $after; }
 
-		if ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key + 1 ) {
-			echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
-		} else {
-			echo esc_html( $crumb[0] );
-		}
+	elseif ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key + 1 ) {
+		echo '<li class="crumb zero"><a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . $after; }
 
-		echo $after;
+	else { echo '<li class="crumb zero"><a><em>' . esc_html( $crumb[0] ) . '</em>' . $after; } }
 
-		if ( sizeof( $breadcrumb ) !== $key + 1 ) {
-			echo $delimiter;
-		}
-	}
+	echo '<li class="right thin"><a class="item-count" href="' . wc_get_cart_url() . '" title="My cart at Animat Habitat&trade;"><font class="underscore">Items: ' . WC()->cart->get_cart_contents_count() . '</font> / Checkout' . $after;
 
 	echo $wrap_after;
 

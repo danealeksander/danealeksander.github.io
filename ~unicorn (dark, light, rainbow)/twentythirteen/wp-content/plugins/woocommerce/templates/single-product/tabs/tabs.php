@@ -16,9 +16,7 @@
  * @version 2.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /**
  * Filter tabs and allow third parties to add their own.
@@ -26,23 +24,24 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Each tab is an array containing title, callback and priority.
  * @see woocommerce_default_product_tabs()
  */
-$tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
-if ( ! empty( $tabs ) ) : ?>
+global $post, $product;
 
-	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs" role="tablist">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
-				<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
-			</div>
-		<?php endforeach; ?>
-	</div>
+$tabs = apply_filters( 'woocommerce_product_tabs', array() ); ?>
 
-<?php endif; ?>
+					<div>
+						<?php the_title( '<h2 class="title">', '</h2>' );
+						if ( ! empty( $tabs ) ) :
+							foreach ( $tabs as $key => $tab ) :
+								call_user_func( $tab['callback'], $key, $tab );
+
+							endforeach; endif; ?>
+
+						<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<p class="linebreak tagged_as">' . _n( 'Art: <em>', 'Art: <em>', count( $product->get_tag_ids() ), 'woocommerce' ) . '</em>', '</p>' ); ?>
+
+						<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<p class="linebreak posted_in">' . _n( '', '', count( $product->get_category_ids() ), 'woocommerce' ) . '', '</p>' ); ?>
+
+						<p>Publication Date: <?php echo get_the_date('F Y'); ?></p>
+						<p>Price: <font class="price"><?php echo $product->get_price_html(); ?></font></p>
+
+						<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?><p class="sku_wrapper"><?php esc_html_e( 'WPC:', 'woocommerce' ); ?> <font class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'None.', 'woocommerce' ); ?></font></p><?php endif; ?></div>

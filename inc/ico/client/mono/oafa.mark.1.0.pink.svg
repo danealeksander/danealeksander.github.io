@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1200 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+  <title>OAFA (Mark 1., pink)</title>
+
+  <style>.pink { fill:#c30463; }</style>
+
+  <path id="oafa.-mark" class="pink" d="M904.5,497l-163.8,94.5l112.9,195.6c-25,33.9-57.2,63.3-96.1,85.8c-150.7,87-343.5,35.4-430.5-115.4
+    l709.6-409.7v0C919.3,144.4,681.4,53.7,465.1,114l99.7,172.7c54.4-6.1,109.3,2.2,159.1,23.4L100.6,670
+    c8.7,62.4,29.4,124.2,62.8,182.1c139.2,241.2,447.7,323.8,688.8,184.6c37.7-21.8,71.5-47.7,101.2-76.8l82.8,143.4l163.8-94.5
+    L904.5,497z"/>
+</svg>

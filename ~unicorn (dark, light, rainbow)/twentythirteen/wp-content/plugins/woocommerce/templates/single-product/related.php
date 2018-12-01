@@ -16,33 +16,22 @@
  * @version     3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( $related_products ) : ?>
+if ( $related_products ) : ?><section>
+		<div class="center half related products">
+			<div class="gutter-side"><h3 class="letterhead"><?php esc_html_e( 'Similar works:', 'woocommerce' ); ?></h3></div>
 
-	<section class="related products">
+			<?php woocommerce_product_loop_start(); ?>
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+				<?php foreach ( $related_products as $related_product ) :
 
-		<?php woocommerce_product_loop_start(); ?>
-
-			<?php foreach ( $related_products as $related_product ) : ?>
-
-				<?php
-				 	$post_object = get_post( $related_product->get_id() );
+					$post_object = get_post( $related_product->get_id() );
 
 					setup_postdata( $GLOBALS['post'] =& $post_object );
 
-					wc_get_template_part( 'content', 'product' ); ?>
+					wc_get_template_part( 'content', 'product' );
 
-			<?php endforeach; ?>
+				endforeach;
 
-		<?php woocommerce_product_loop_end(); ?>
-
-	</section>
-
-<?php endif;
-
-wp_reset_postdata();
+				woocommerce_product_loop_end(); ?></div><br clear="all"></section><?php endif; wp_reset_postdata();

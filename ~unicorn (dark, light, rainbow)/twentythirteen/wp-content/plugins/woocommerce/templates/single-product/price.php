@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Product Price
+ * Single Product Price, including microdata for SEO
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/price.php.
  *
@@ -16,11 +16,4 @@
  * @version 3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
-global $product;
-
-?>
-<p class="price"><?php echo $product->get_price_html(); ?></p>
+if ( ! defined( 'ABSPATH' ) ) { exit; }

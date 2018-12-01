@@ -18,9 +18,7 @@
  * @version 2.6.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 
@@ -43,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 *
 			 * @hooked woocommerce_review_display_rating - 10
 			 */
-			do_action( 'woocommerce_review_before_comment_meta', $comment );
+			// do_action( 'woocommerce_review_before_comment_meta', $comment );
 
 			/**
 			 * The woocommerce_review_meta hook.
