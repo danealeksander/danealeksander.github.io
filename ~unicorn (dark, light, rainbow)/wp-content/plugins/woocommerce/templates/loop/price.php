@@ -11,15 +11,17 @@
  * the readme will list any important changes.
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
  * @package 	WooCommerce/Templates
  * @version     1.6.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 global $product;
+?>
 
-if ( $price_html = $product->get_price_html() ) : ?>
-	<h5 class="price"><?php echo $price_html; ?></h5>
+<?php if ( $price_html = $product->get_price_html() ) : ?>
+	<span class="price"><?php echo $price_html; ?></span>
 <?php endif; ?>

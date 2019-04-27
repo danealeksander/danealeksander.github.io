@@ -11,13 +11,14 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
  * @package WooCommerce/Templates
  * @version 2.6.1
  */
 
-if ( ! defined( 'ABSPATH' ) ) { exit; } ?>
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+?>
 <li <?php wc_product_cat_class( '', $category ); ?>>
 	<?php
 	/**
@@ -32,17 +33,15 @@ if ( ! defined( 'ABSPATH' ) ) { exit; } ?>
 	 *
 	 * @hooked woocommerce_subcategory_thumbnail - 10
 	 */
-	do_action( 'woocommerce_before_subcategory_title', $category ); ?>
+	do_action( 'woocommerce_before_subcategory_title', $category );
 
-	<h2><?php
-		/**
-		 * woocommerce_shop_loop_subcategory_title hook.
-		 *
-		 * @hooked woocommerce_template_loop_category_title - 10
-		 */
-		do_action( 'woocommerce_shop_loop_subcategory_title', $category ); ?></h2>
+	/**
+	 * woocommerce_shop_loop_subcategory_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_title - 10
+	 */
+	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
 
-<?php
 	/**
 	 * woocommerce_after_subcategory_title hook.
 	 */
