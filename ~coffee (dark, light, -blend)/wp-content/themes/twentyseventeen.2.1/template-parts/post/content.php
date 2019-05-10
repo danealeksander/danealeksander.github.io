@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for displaying gallery posts
+ * Template part for displaying posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen
@@ -14,9 +14,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
-	if ( is_sticky() && is_home() ) {
+	if ( is_sticky() && is_home() ) :
 		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
-	}
+	endif;
 	?>
 	<header class="entry-header">
 		<?php
@@ -41,7 +41,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() && ! get_post_gallery() ) : ?>
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
@@ -50,41 +50,24 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
-
 		<?php
-		if ( ! is_single() ) {
+		/* translators: %s: Name of current post */
+		the_content(
+			sprintf(
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+				get_the_title()
+			)
+		);
 
-			// If not a single post, highlight the gallery.
-			if ( get_post_gallery() ) {
-				echo '<div class="entry-gallery">';
-					echo get_post_gallery();
-				echo '</div>';
-			};
-
-		};
-
-		if ( is_single() || ! get_post_gallery() ) {
-
-			/* translators: %s: Name of current post */
-			the_content(
-				sprintf(
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-					get_the_title()
-				)
-			);
-
-			wp_link_pages(
-				array(
-					'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-					'after'       => '</div>',
-					'link_before' => '<span class="page-number">',
-					'link_after'  => '</span>',
-				)
-			);
-
-		};
+		wp_link_pages(
+			array(
+				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+				'after'       => '</div>',
+				'link_before' => '<span class="page-number">',
+				'link_after'  => '</span>',
+			)
+		);
 		?>
-
 	</div><!-- .entry-content -->
 
 	<?php

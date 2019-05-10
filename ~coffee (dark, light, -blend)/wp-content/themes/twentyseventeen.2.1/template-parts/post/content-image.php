@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for displaying video posts
+ * Template part for displaying image posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen
@@ -27,7 +27,7 @@
 			} else {
 				echo twentyseventeen_time_link();
 				twentyseventeen_edit_link();
-			}
+			};
 				echo '</div><!-- .entry-meta -->';
 		};
 
@@ -41,17 +41,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php
-		$content = apply_filters( 'the_content', get_the_content() );
-		$video   = false;
-
-		// Only get video from the content if a playlist isn't present.
-	if ( false === strpos( $content, 'wp-playlist-script' ) ) {
-		$video = get_media_embedded_in_content( $content, array( 'video', 'object', 'embed', 'iframe' ) );
-	}
-	?>
-
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() && empty( $video ) ) : ?>
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
@@ -62,21 +52,9 @@
 	<div class="entry-content">
 
 		<?php
-		if ( ! is_single() ) {
+		if ( is_single() || '' === get_the_post_thumbnail() ) {
 
-			// If not a single post, highlight the video file.
-			if ( ! empty( $video ) ) {
-				foreach ( $video as $video_html ) {
-					echo '<div class="entry-video">';
-						echo $video_html;
-					echo '</div>';
-				}
-			};
-
-		};
-
-		if ( is_single() || empty( $video ) ) {
-
+			// Only show content if is a single post, or if there's no featured image.
 			/* translators: %s: Name of current post */
 			the_content(
 				sprintf(
@@ -93,6 +71,7 @@
 					'link_after'  => '</span>',
 				)
 			);
+
 		};
 		?>
 

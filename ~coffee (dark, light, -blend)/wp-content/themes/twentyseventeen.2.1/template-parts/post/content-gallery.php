@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for displaying image posts
+ * Template part for displaying gallery posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen
@@ -28,7 +28,7 @@
 				echo twentyseventeen_time_link();
 				twentyseventeen_edit_link();
 			};
-				echo '</div><!-- .entry-meta -->';
+			echo '</div><!-- .entry-meta -->';
 		};
 
 		if ( is_single() ) {
@@ -41,7 +41,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() && ! get_post_gallery() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
@@ -52,9 +52,19 @@
 	<div class="entry-content">
 
 		<?php
-		if ( is_single() || '' === get_the_post_thumbnail() ) {
+		if ( ! is_single() ) {
 
-			// Only show content if is a single post, or if there's no featured image.
+			// If not a single post, highlight the gallery.
+			if ( get_post_gallery() ) {
+				echo '<div class="entry-gallery">';
+					echo get_post_gallery();
+				echo '</div>';
+			};
+
+		};
+
+		if ( is_single() || ! get_post_gallery() ) {
+
 			/* translators: %s: Name of current post */
 			the_content(
 				sprintf(

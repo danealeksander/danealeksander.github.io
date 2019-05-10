@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for displaying audio posts
+ * Template part for displaying video posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen
@@ -27,7 +27,7 @@
 			} else {
 				echo twentyseventeen_time_link();
 				twentyseventeen_edit_link();
-			};
+			}
 				echo '</div><!-- .entry-meta -->';
 		};
 
@@ -43,16 +43,15 @@
 
 	<?php
 		$content = apply_filters( 'the_content', get_the_content() );
-		$audio   = false;
+		$video   = false;
 
-		// Only get audio from the content if a playlist isn't present.
+		// Only get video from the content if a playlist isn't present.
 	if ( false === strpos( $content, 'wp-playlist-script' ) ) {
-		$audio = get_media_embedded_in_content( $content, array( 'audio' ) );
+		$video = get_media_embedded_in_content( $content, array( 'video', 'object', 'embed', 'iframe' ) );
 	}
-
 	?>
 
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() && empty( $video ) ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
@@ -65,18 +64,18 @@
 		<?php
 		if ( ! is_single() ) {
 
-			// If not a single post, highlight the audio file.
-			if ( ! empty( $audio ) ) {
-				foreach ( $audio as $audio_html ) {
-					echo '<div class="entry-audio">';
-						echo $audio_html;
-					echo '</div><!-- .entry-audio -->';
+			// If not a single post, highlight the video file.
+			if ( ! empty( $video ) ) {
+				foreach ( $video as $video_html ) {
+					echo '<div class="entry-video">';
+						echo $video_html;
+					echo '</div>';
 				}
 			};
 
 		};
 
-		if ( is_single() || empty( $audio ) ) {
+		if ( is_single() || empty( $video ) ) {
 
 			/* translators: %s: Name of current post */
 			the_content(
@@ -94,7 +93,6 @@
 					'link_after'  => '</span>',
 				)
 			);
-
 		};
 		?>
 
