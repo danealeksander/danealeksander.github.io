@@ -236,9 +236,9 @@ class WC_Checkout {
 				'order_comments' => array(
 					'type'        => 'textarea',
 					'class'       => array( 'notes' ),
-					'label'       => __( 'Order Notes', 'woocommerce' ),
+					'label'       => __( 'Order notes', 'woocommerce' ),
 					'placeholder' => esc_attr__(
-						'',
+						'Notes about your order, e.g. special notes for delivery.',
 						'woocommerce'
 					),
 				),
@@ -1176,7 +1176,7 @@ class WC_Checkout {
 		if ( is_user_logged_in() ) {
 			// Load customer object, but keep it cached to avoid reloading it multiple times.
 			if ( is_null( $this->logged_in_customer ) ) {
-				$this->logged_in_customer = new WC_Customer( get_current_user_id() );
+				$this->logged_in_customer = new WC_Customer( get_current_user_id(), true );
 			}
 			$customer_object = $this->logged_in_customer;
 		}
