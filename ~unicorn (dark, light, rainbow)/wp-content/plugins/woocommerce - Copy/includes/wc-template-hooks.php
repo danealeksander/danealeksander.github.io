@@ -44,7 +44,7 @@ add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_produ
  *
  * @see woocommerce_breadcrumb()
  */
-add_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+add_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb' );
 
 /**
  * Sidebar.
@@ -157,7 +157,7 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_s
  * @see woocommerce_review_display_comment_text()
  */
 // add_action( 'woocommerce_review_before', 'woocommerce_review_display_gravatar', 10 );
-// dd_action( 'woocommerce_review_before_comment_meta', 'woocommerce_review_display_rating', 10 );
+// add_action( 'woocommerce_review_before_comment_meta', 'woocommerce_review_display_rating', 10 );
 // add_action( 'woocommerce_review_meta', 'woocommerce_review_display_meta', 10 );
 // add_action( 'woocommerce_review_comment_text', 'woocommerce_review_display_comment_text', 10 );
 
@@ -209,7 +209,7 @@ add_action( 'woocommerce_product_additional_information', 'wc_display_product_at
  * @see woocommerce_checkout_payment()
  */
 add_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
-//add_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+// add_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 add_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
 add_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 add_action( 'woocommerce_checkout_terms_and_conditions', 'wc_checkout_privacy_policy_text', 20 );
@@ -288,19 +288,3 @@ add_action( 'woocommerce_account_payment-methods_endpoint', 'woocommerce_account
 add_action( 'woocommerce_account_add-payment-method_endpoint', 'woocommerce_account_add_payment_method' );
 add_action( 'woocommerce_account_edit-account_endpoint', 'woocommerce_account_edit_account' );
 add_action( 'woocommerce_register_form', 'wc_registration_privacy_policy_text', 20 );
-
-/**
- * Notices.
- */
-// add_action( 'woocommerce_cart_is_empty', 'woocommerce_output_all_notices', 5 );
-// add_action( 'woocommerce_shortcode_before_product_cat_loop', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_before_single_product', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_before_cart', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_before_checkout_form_cart_notices', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_before_checkout_form', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_account_content', 'woocommerce_output_all_notices', 5 );
-// add_action( 'woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_before_lost_password_form', 'woocommerce_output_all_notices', 10 );
-// add_action( 'before_woocommerce_pay', 'woocommerce_output_all_notices', 10 );
-// add_action( 'woocommerce_before_reset_password_form', 'woocommerce_output_all_notices', 10 );
