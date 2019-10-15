@@ -134,7 +134,7 @@ function get_the_title( $post = 0 ) {
 			 *                         Default 'Protected: %s'.
 			 * @param WP_Post $post    Current post object.
 			 */
-			$protected_title_format = apply_filters( 'protected_title_format', __( 'Project: %s &#42;' ), $post );
+			$protected_title_format = apply_filters( 'protected_title_format', __( 'Protected: %s' ), $post );
 			$title                  = sprintf( $protected_title_format, $title );
 		} elseif ( isset( $post->post_status ) && 'private' == $post->post_status ) {
 
@@ -149,7 +149,7 @@ function get_the_title( $post = 0 ) {
 			 *                         Default 'Private: %s'.
 			 * @param WP_Post $post    Current post object.
 			 */
-			$private_title_format = apply_filters( 'private_title_format', __( 'Private: %s &#42;' ), $post );
+			$private_title_format = apply_filters( 'private_title_format', __( 'Private: %s' ), $post );
 			$title                = sprintf( $private_title_format, $title );
 		}
 	}
@@ -303,17 +303,24 @@ function get_the_content( $more_link_text = null, $strip_teaser = false, $post =
 	$has_teaser = false;
 
 	// If post password required and it doesn't match the cookie.
-	if ( post_password_required( $post ) ) {
-		return get_the_password_form( $post );
+	if ( post_password_required( $_post ) ) {
+		return get_the_password_form( $_post );
 	}
 
-	if ( $page > count( $pages ) ) { // if the requested page doesn't exist
-		$page = count( $pages ); // give them the highest numbered page that DOES exist
+	if ( $elements['page'] > count( $elements['pages'] ) ) { // if the requested page doesn't exist
+		$elements['page'] = count( $elements['pages'] ); // give them the highest numbered page that DOES exist
 	}
 
-	$content = $pages[ $page - 1 ];
+	$page_no = $elements['page'];
+	$content = $elements['pages'][ $page_no - 1 ];
 	if ( preg_match( '/<!--more(.*?)?-->/', $content, $matches ) ) {
+		if ( has_block( 'more', $content ) ) {
+			// Remove the core/more block delimiters. They will be left over after $content is split up.
+			$content = preg_replace( '/<!-- \/?wp:more(.*?) -->/', '', $content );
+		}
+
 		$content = explode( $matches[0], $content, 2 );
+
 		if ( ! empty( $matches[1] ) && ! empty( $more_link_text ) ) {
 			$more_link_text = strip_tags( wp_kses_no_null( trim( $matches[1] ) ) );
 		}
@@ -323,21 +330,21 @@ function get_the_content( $more_link_text = null, $strip_teaser = false, $post =
 		$content = array( $content );
 	}
 
-	if ( false !== strpos( $post->post_content, '<!--noteaser-->' ) && ( ! $multipage || $page == 1 ) ) {
+	if ( false !== strpos( $_post->post_content, '<!--noteaser-->' ) && ( ! $elements['multipage'] || $elements['page'] == 1 ) ) {
 		$strip_teaser = true;
 	}
 
 	$teaser = $content[0];
 
-	if ( $more && $strip_teaser && $has_teaser ) {
+	if ( $elements['more'] && $strip_teaser && $has_teaser ) {
 		$teaser = '';
 	}
 
 	$output .= $teaser;
 
 	if ( count( $content ) > 1 ) {
-		if ( $more ) {
-			$output .= '<span id="more-' . $post->ID . '"></span>' . $content[1];
+		if ( $elements['more'] ) {
+			$output .= '<span id="more-' . $_post->ID . '"></span>' . $content[1];
 		} else {
 			if ( ! empty( $more_link_text ) ) {
 
@@ -349,30 +356,13 @@ function get_the_content( $more_link_text = null, $strip_teaser = false, $post =
 				 * @param string $more_link_element Read More link element.
 				 * @param string $more_link_text    Read More text.
 				 */
-				$output .= apply_filters( 'the_content_more_link', ' <a href="' . get_permalink() . "#more-{$post->ID}\" class=\"more-link\">$more_link_text</a>", $more_link_text );
+				$output .= apply_filters( 'the_content_more_link', ' <a href="' . get_permalink( $_post ) . "#more-{$_post->ID}\" class=\"more-link\">$more_link_text</a>", $more_link_text );
 			}
 			$output = force_balance_tags( $output );
 		}
 	}
 
-	if ( $preview ) { // Preview fix for JavaScript bug with foreign languages.
-		$output = preg_replace_callback( '/\%u([0-9A-F]{4})/', '_convert_urlencoded_to_entities', $output );
-	}
-
 	return $output;
-}
-
-/**
- * Preview fix for JavaScript bug with foreign languages.
- *
- * @since 3.1.0
- * @access private
- *
- * @param array $match Match array from preg_replace_callback.
- * @return string
- */
-function _convert_urlencoded_to_entities( $match ) {
-	return '&#' . base_convert( $match[1], 16, 10 ) . ';';
 }
 
 /**
@@ -620,6 +610,9 @@ function get_body_class( $class = '' ) {
 	if ( is_home() ) {
 		$classes[] = 'blog';
 	}
+	if ( is_privacy_policy() ) {
+		$classes[] = 'privacy-policy';
+	}
 	if ( is_archive() ) {
 		$classes[] = 'archive';
 	}
@@ -769,7 +762,8 @@ function get_body_class( $class = '' ) {
 		$classes[] = 'no-customize-support';
 	}
 
-	if ( get_background_color() !== get_theme_support( 'custom-background', 'default-color' ) || get_background_image() ) {
+	if ( current_theme_supports( 'custom-background' )
+		&& ( get_background_color() !== get_theme_support( 'custom-background', 'default-color' ) || get_background_image() ) ) {
 		$classes[] = 'custom-background';
 	}
 
@@ -1697,11 +1691,10 @@ function prepend_attachment( $content ) {
 function get_the_password_form( $post = 0 ) {
 	$post   = get_post( $post );
 	$label  = 'pwbox-' . ( empty( $post->ID ) ? rand() : $post->ID );
-	$output = '<div class="clear blocks"><div class="left"><h2 class="letterhead">Client Area</h2>' .
-		'<p>&#42; This area is password protected and is published only for clients of Dane Aleksander ― please enter the password given with Agreement.</p><br class="clear">' .
-		'<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">' . '<p><input name="post_password" id="' . $label . '" type="password" size="20" /></label></p>' .
-		'<p class="linebreak"><input type="submit" name="Submit" value="' . esc_attr_x( 'Enter', 'post password form' ) . '"/></p></form></div><br class="clear">' .
-		'<div class="left"><p class="linebreak small"><a href="//lifeasplay.ca/dane/client/project/" title="Dane Aleksander">Not a client?</a> Please direct any question you have about working with Dane to <a href="mailto:inbox@lifeasplay.ca" title="Send feedback to Dane Aleksander.">inbox[at]lifeasplay[dot]ca</a>.</p></div><br class="clear"></div>';
+	$output = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
+	<p>' . __( 'This content is password protected. To view it please enter your password below:' ) . '</p>
+	<p><label for="' . $label . '">' . __( 'Password:' ) . ' <input name="post_password" id="' . $label . '" type="password" size="20" /></label> <input type="submit" name="Submit" value="' . esc_attr_x( 'Enter', 'post password form' ) . '" /></p></form>
+	';
 
 	/**
 	 * Filters the HTML output for the protected post password form.

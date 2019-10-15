@@ -77,7 +77,7 @@ function wc_sanitize_permalink( $value ) {
 	}
 
 	$value = esc_url_raw( trim( $value ) );
-	$value = str_replace( 'http://', '', $value );
+	$value = str_replace( 'https://', '', $value );
 	return untrailingslashit( $value );
 }
 
@@ -579,8 +579,8 @@ function wc_price( $price, $args = array() ) {
 		$price = wc_trim_zeros( $price );
 	}
 
-	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol">' . get_woocommerce_currency_symbol( $args['currency'] ) . '</span>', $price );
-	$return          = '<span class="woocommerce-Price-amount amount">' . $formatted_price . '</span>';
+	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<font class="woocommerce-Price-currencySymbol">' . get_woocommerce_currency_symbol( $args['currency'] ) . '</font>', $price );
+	$return          = '<font class="woocommerce-Price-amount amount">' . $formatted_price . '</font>';
 
 	if ( $args['ex_tax_label'] && wc_tax_enabled() ) {
 		$return .= ' <small class="woocommerce-Price-taxLabel tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';
@@ -1175,24 +1175,24 @@ if ( ! function_exists( 'wc_make_numeric_postcode' ) ) {
  * @return string
  */
 function wc_format_stock_for_display( $product ) {
-	$display      = __( 'In stock', 'woocommerce' );
+	$display      = __( 'In stock*', 'woocommerce' );
 	$stock_amount = $product->get_stock_quantity();
 
 	switch ( get_option( 'woocommerce_stock_format' ) ) {
 		case 'low_amount':
 			if ( $stock_amount <= get_option( 'woocommerce_notify_low_stock_amount' ) ) {
 				/* translators: %s: stock amount */
-				$display = sprintf( __( 'Only %s left in stock', 'woocommerce' ), wc_format_stock_quantity_for_display( $stock_amount, $product ) );
+				$display = sprintf( __( 'Limited stock: %s', 'woocommerce' ), wc_format_stock_quantity_for_display( $stock_amount, $product ) );
 			}
 			break;
 		case '':
 			/* translators: %s: stock amount */
-			$display = sprintf( __( '%s in stock', 'woocommerce' ), wc_format_stock_quantity_for_display( $stock_amount, $product ) );
+			$display = sprintf( __( 'In stock: %s', 'woocommerce' ), wc_format_stock_quantity_for_display( $stock_amount, $product ) );
 			break;
 	}
 
 	if ( $product->backorders_allowed() && $product->backorders_require_notification() ) {
-		$display .= ' ' . __( '(can be backordered)', 'woocommerce' );
+		$display .= ' ' . __( '(Available for backorder.)', 'woocommerce' );
 	}
 
 	return $display;
