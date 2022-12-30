@@ -1,226 +1,306 @@
-/* CSS Document */
-/* Alternative colors for Dark, Light, One by Dane Aleksander. */
 
-/*********************************/
-/* Alt *//* colors [UNICORN] */
+
+/* ROOT */
+
+:root {
+
+  --periwinkle: #C3CDE6;
+  --periwinkle-ii: #B6BED3;
+  --periwinkle-iii: #A1A6B7;
+  --periwinkle-iv: #848792;
+  --periwinkle-v: #5A595E;
+
+  --purple: #9F009F;
+  --purple-ii: #8F2A86; /* 810281 */
+  --purple-iii: #832F7B; /* 630463 */
+  --purple-iv: #70336B; /* 460646 */
+  --purple-v: #51314E; /* 2F072F */
+
+  --pink: #FF007F;
+  --pink-ii: #DA2578; /* C30463 */
+  --pink-iii: #C12F6F; /* 880848 */
+  --pink-iv: #9E3661; /* 4D0D2D */
+  --pink-v: #693449; /* 290F1C */
+
+  --orange: #FF9F40;
+  --orange-ii: #E49343; /* C67E36 */
+  --orange-iii: #C78343; /* 8D5D2D */
+  --orange-iv: #A16E41; /* 533B24 */
+  --orange-v: #684E38; /* 31281E */
+
+  --yellow: #FFEFBF;
+  --yellow-ii: #E9DBB2; /* CABE9A */
+  --yellow-iii: #C9BD9C; /* 958D75 */
+  --yellow-iv: #A0967F; /* 5F5B4F */
+  --yellow-v: #666055; /* 403E39 */
+
+}
+
+
+
+/* **********  ALT COLOR */
 
 .trim {
-  border: #0A0A0A thin solid;
+  border: var(--dark) thin solid;
 }
 
-/***********************************************/
-/* Alt.1 *//*** PURPLE ***//* rgb(159,0,159) */
-
-#purple nav em,
-#purple a.color,
-#purple .navigation a,
-#purple h1,
-#purple h3,
-#purple h2.color,
-#purple h4.color,
-#purple font.color,
-.purple,
-li.purple a:active,
-li.purple a:hover {
-  color: #9F009F;
-}
-#purple a.color:hover,
-#purple a:hover .color,
-#purple .navigation a:hover,
-a.purple:hover,
-a:hover .purple {
-  color: #810281;
-}
-html #purple,
-#purple nav,
-#purple article,
-#purple aside,
-#purple .color div.color {
-  background: #0A0A0A;
-}
-#purple div.color,
-#purple aside.color {
-  background: #2F072F;
-}
-#purple button,
-#purple a:hover > div.color,
-#purple #soci a img,
-div.purple {
-  background: #460646;
-}
-#purple button:hover,
-div.purple:hover {
-  background: #630463;
-}
-#purple pre.thin {
-  border: #2F072F thin solid;
-}
-nav ul li.purple {
-  border-color: #9F009F;
+#rainbow-unicorn,
+#rainbow-unicorn nav,
+#rainbow-unicorn article,
+#rainbow-unicorn aside,
+#rainbow-unicorn .color div.color,
+#rainbow-unicorn::-webkit-scrollbar-track {
+  background: var(--dark-ii);
 }
 
-#purple::-webkit-scrollbar-track { background: #0A0A0A; }
-#purple::-webkit-scrollbar-thumb { background: #9F009F; }
 
-/*********************************************/
-/* Alt.2 *//*** PINK ***//* rgb(255,0,127) */
 
-#design nav em,
-#design a.color,
-#design .navigation a,
-#design h1,
-#design h3,
-#design h2.color,
-#design h4.color,
-#design font.color,
-.design,
-li.design a:active,
-li.design a:hover {
-  color: #FF007F;
+/* **********  PERIWINKLE */
+
+#periwinkle-unicorn nav em,
+#periwinkle-unicorn a.color,
+#periwinkle-unicorn .navigation a,
+#periwinkle-unicorn h1,
+#periwinkle-unicorn h3,
+#periwinkle-unicorn h2.color,
+#periwinkle-unicorn h4.color,
+#periwinkle-unicorn font.color,
+.periwinkle-unicorn,
+li.periwinkle-unicorn.active a,
+li.periwinkle-unicorn a:active,
+li.periwinkle-unicorn a:hover {
+  color: var(--periwinkle);
 }
-#design a.color:hover,
-#design a:hover .color,
-#design .navigation a:hover,
-a.design:hover,
-a:hover .design {
-  color: #C30463;
+#periwinkle-unicorn a.color:hover,
+#periwinkle-unicorn a:hover .color,
+#periwinkle-unicorn .navigation a:hover,
+a.periwinkle-unicorn:hover,
+a:hover .periwinkle-unicorn {
+  color: var(--periwinkle-ii);
 }
-html #design,
-#design nav,
-#design article,
-#design aside,
-#design .color div.color {
-  background: #111111;
+#periwinkle-unicorn div.color,
+#periwinkle-unicorn aside.color {
+  background: var(--periwinkle-v);
 }
-#design div.color,
-#design aside.color {
-  background: #290F1C;
+#periwinkle-unicorn button,
+#periwinkle-unicorn a:hover > div.color,
+#periwinkle-unicorn #soci a img,
+div.periwinkle-unicorn {
+  background: var(--periwinkle-iv);
 }
-#design button,
-#design #soci a img,
-#design a:hover > div.color,
-div.design {
-  background: #4D0D2D;
+#periwinkle-unicorn button:hover,
+div.periwinkle-unicorn:hover {
+  background: var(--periwinkle-iii);
 }
-#design button:hover,
-div.design:hover {
-  background: #880848;
+#periwinkle-unicorn pre.thin {
+  border: var(--periwinkle-v) thin solid;
 }
-#design pre.thin {
-  border: #290f1C thin solid;
-}
-nav ul li.design {
-  border-color: #FF007F;
+nav ul li.periwinkle-unicorn {
+  border-color: var(--periwinkle);
 }
 
-#design::-webkit-scrollbar-track { background: #111111; }
-#design::-webkit-scrollbar-thumb { background: #FF007F; }
-
-/************************************************/
-/* Alt.3 *//*** ORANGE ***//* rgb(255,159,64) */
-
-#animate nav em,
-#animate a.color,
-#animate .navigation a,
-#animate h1,
-#animate h3,
-#animate h2.color,
-#animate h4.color,
-#animate font.color,
-.animate,
-li.animate a:active,
-li.animate a:hover {
-  color: #FF9F40;
-}
-#animate a.color:hover,
-#animate a:hover .color,
-#animate .navigation a:hover,
-a.animate:hover,
-a:hover .animate {
-  color: #C67E36;
-}
-html #animate,
-#animate nav,
-#animate article,
-#animate aside,
-#animate .color div.color {
-  background: #1A1A1A;
-}
-#animate div.color,
-#animate aside.color {
-  background: #31281E;
-}
-#animate button,
-#animate #soci a img,
-#animate a:hover > div.color,
-div.animate {
-  background: #533B24;
-}
-#animate button:hover,
-div.animate:hover {
-  background: #8D5D2D;
-}
-#animate pre.thin {
-  border: #31281E thin solid;
-}
-nav ul li.animate {
-  border-color: #FF9F40;
+#rainbow-unicorn::-webkit-scrollbar-thumb,
+#periwinkle-unicorn::-webkit-scrollbar-thumb {
+  background: var(--periwinkle);
 }
 
-#animate::-webkit-scrollbar-track { background: #1A1A1A; }
-#animate::-webkit-scrollbar-thumb { background: #FF9F40; }
 
-/*************************************************/
-/* Alt.5 *//*** YELLOW ***//* rgb(255,239,191) */
 
-#illustrate nav em,
-#illustrate a.color,
-#illustrate .navigation a,
-#illustrate h1,
-#illustrate h3,
-#illustrate h2.color,
-#illustrate h4.color,
-#illustrate font.color,
-.illustrate,
-li.illustrate a:active,
-li.illustrate a:hover {
-  color: #FFEFBF;
+/* **********  PURPLE: rgb(159,0,159) */
+
+#purple-unicorn nav em,
+#purple-unicorn a.color,
+#purple-unicorn .navigation a,
+#purple-unicorn h1,
+#purple-unicorn h3,
+#purple-unicorn h2.color,
+#purple-unicorn h4.color,
+#purple-unicorn font.color,
+.purple-unicorn,
+li.purple-unicorn.active a,
+li.purple-unicorn a:active,
+li.purple-unicorn a:hover {
+  color: var(--purple);
 }
-#illustrate a.color:hover,
-#illustrate a:hover .color,
-#illustrate .navigation a:hover,
-a.illustrate:hover,
-a:hover .illustrate {
-  color: #CABE9A;
+#purple-unicorn a.color:hover,
+#purple-unicorn a:hover .color,
+#purple-unicorn .navigation a:hover,
+a.purple-unicorn:hover,
+a:hover .purple-unicorn {
+  color: var(--purple-ii);
 }
-html #illustrate,
-#illustrate nav,
-#illustrate article,
-#illustrate aside,
-#illustrate .color div.color {
-  background: #2A2A2A;
+#purple-unicorn div.color,
+#purple-unicorn aside.color {
+  background: var(--purple-v);
 }
-#illustrate div.color,
-#illustrate aside.color {
-  background: #403E39;
+#purple-unicorn button,
+#purple-unicorn a:hover > div.color,
+#purple-unicorn #soci a img,
+div.purple-unicorn {
+  background: var(--purple-iv);
 }
-#illustrate button,
-#illustrate #soci a img,
-#illustrate a:hover > div.color,
-div.illustrate {
-  background: #5F5B4F;
+#purple-unicorn button:hover,
+div.purple-unicorn:hover {
+  background: var(--purple-iii);
 }
-#illustrate button:hover,
-#illustrate .window:hover,
-div.illustrate:hover {
-  background: #958D75;
+#purple-unicorn pre.thin {
+  border: var(--purple-v) thin solid;
 }
-#illustrate pre.thin {
-  border: #403E39 thin solid;
-}
-nav ul li.illustrate {
-  border-color: #FFEFBF;
+nav ul li.purple-unicorn {
+  border-color: var(--purple);
 }
 
-#illustrate::-webkit-scrollbar-track { background: #2A2A2A; }
-#illustrate::-webkit-scrollbar-thumb { background: #FFEFBF; }
+#purple-unicorn::-webkit-scrollbar-thumb {
+  background: var(--purple);
+}
+
+
+
+/* **********  PINK: rgb(255,0,127) */
+
+#pink-unicorn nav em,
+#pink-unicorn a.color,
+#pink-unicorn .navigation a,
+#pink-unicorn h1,
+#pink-unicorn h3,
+#pink-unicorn h2.color,
+#pink-unicorn h4.color,
+#pink-unicorn font.color,
+.pink-unicorn,
+li.pink-unicorn.active a,
+li.pink-unicorn a:active,
+li.pink-unicorn a:hover {
+  color: var(--pink);
+}
+#pink-unicorn a.color:hover,
+#pink-unicorn a:hover .color,
+#pink-unicorn .navigation a:hover,
+a.pink-unicorn:hover,
+a:hover .pink-unicorn {
+  color: var(--pink-ii);
+}
+#pink-unicorn div.color,
+#pink-unicorn aside.color {
+  background: var(--pink-v);
+}
+#pink-unicorn button,
+#pink-unicorn #soci a img,
+#pink-unicorn a:hover > div.color,
+div.pink-unicorn {
+  background: var(--pink-iv);
+}
+#pink-unicorn button:hover,
+div.pink-unicorn:hover {
+  background: var(--pink-iii);
+}
+#pink-unicorn pre.thin {
+  border: var(--pink-v) thin solid;
+}
+nav ul li.pink-unicorn {
+  border-color: var(--pink);
+}
+
+#pink-unicorn::-webkit-scrollbar-thumb {
+  background: var(--pink);
+}
+
+
+
+/* **********  ORANGE: rgb(255,159,64) */
+
+#orange-unicorn nav em,
+#orange-unicorn a.color,
+#orange-unicorn .navigation a,
+#orange-unicorn h1,
+#orange-unicorn h3,
+#orange-unicorn h2.color,
+#orange-unicorn h4.color,
+#orange-unicorn font.color,
+.orange-unicorn,
+li.orange-unicorn.active a,
+li.orange-unicorn a:active,
+li.orange-unicorn a:hover {
+  color: var(--orange);
+}
+#orange-unicorn a.color:hover,
+#orange-unicorn a:hover .color,
+#orange-unicorn .navigation a:hover,
+a.orange-unicorn:hover,
+a:hover .orange-unicorn {
+  color: var(--orange-ii);
+}
+#orange-unicorn div.color,
+#orange-unicorn aside.color {
+  background: var(--orange-v);
+}
+#orange-unicorn button,
+#orange-unicorn #soci a img,
+#orange-unicorn a:hover > div.color,
+div.orange-unicorn {
+  background: var(--orange-iv);
+}
+#orange-unicorn button:hover,
+div.orange-unicorn:hover {
+  background: var(--orange-iii);
+}
+#orange-unicorn pre.thin {
+  border: var(--orange-v) thin solid;
+}
+nav ul li.orange-unicorn {
+  border-color: var(--orange);
+}
+
+#orange-unicorn::-webkit-scrollbar-thumb {
+  background: var(--orange);
+}
+
+
+
+/* **********  YELLOW: rgb(255,239,191) */
+
+#yellow-unicorn nav em,
+#yellow-unicorn a.color,
+#yellow-unicorn .navigation a,
+#yellow-unicorn h1,
+#yellow-unicorn h3,
+#yellow-unicorn h2.color,
+#yellow-unicorn h4.color,
+#yellow-unicorn font.color,
+.yellow-unicorn,
+li.yellow-unicorn.active a,
+li.yellow-unicorn a:active,
+li.yellow-unicorn a:hover {
+  color: var(--yellow);
+}
+#yellow-unicorn a.color:hover,
+#yellow-unicorn a:hover .color,
+#yellow-unicorn .navigation a:hover,
+a.yellow-unicorn:hover,
+a:hover .yellow-unicorn {
+  color: var(--yellow-ii);
+}
+#yellow-unicorn div.color,
+#yellow-unicorn aside.color {
+  background: var(--yellow-v);
+}
+#yellow-unicorn button,
+#yellow-unicorn #soci a img,
+#yellow-unicorn a:hover > div.color,
+div.yellow-unicorn {
+  background: var(--yellow-iv);
+}
+#yellow-unicorn button:hover,
+#yellow-unicorn .window:hover,
+div.yellow-unicorn:hover {
+  background: var(--yellow-iii);
+}
+#yellow-unicorn pre.thin {
+  border: var(--yellow-v) thin solid;
+}
+nav ul li.yellow-unicorn {
+  border-color: var(--yellow);
+}
+
+#yellow-unicorn::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="100%" height="100%" viewBox="0 0 960 960" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+	<title>Animat Habitat</title>
+
+  <style>.light { fill:#E3E3E3; }</style>
+
+	<path id="oafa.-mark" class="light" d="M683,411.334l-109.2,63l75.267,130.399c-16.666,22.6-38.133,42.2-64.066,57.2
+	c-100.467,58-229,23.6-287-76.934l473.066-273.133l0,0c-78.199-135.601-236.8-196.067-381-155.867l66.467,115.133
+	c36.267-4.067,72.867,1.467,106.066,15.6L147.067,526.667c5.8,41.6,19.6,82.8,41.867,121.399
+	c92.8,160.8,298.467,215.867,459.199,123.066c25.134-14.533,47.667-31.8,67.467-51.199l55.2,95.6l109.2-63L683,411.334z"/>
+</svg>

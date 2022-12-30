@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; child-src 'none'; font-src fonts.gstatic.com; script-src 'unsafe-inline' createsend.com www.createsend.com js.createsend1.com; style-src fonts.googleapis.com 'self';" /> -->
+  <!-- <meta name="google" content="notranslate" /> -->
+
+  <meta name="author" content="Dane Aleksander" />
+  <meta name="company" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dane Aleksander. Articles. SIGGRAPH 2014.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500" />
+
+  <link rel="preconnect" href="https://animathabitat.org" />
+  <link rel="stylesheet" href="https://animathabitat.org/inc/css/dark.light.unicorn.css" type="text/css" />
+  <link rel="stylesheet" href="../../inc/css/rainbow.unicorn.css" />
+
+  <link rel="icon" href="../../inc/ico/dane-aleksander.mark.purple.png" />
+
+  <style>
+    html { background-color:#222; }
+  </style>
+
+</head>
+
+<body id="rainbow-unicorn">
+
+  <nav>
+    <ul class="page">
+      <li class="crumb purple-unicorn"><a href="../" title="Dane Aleksander, graphic artist.">&lt;</a></li>
+      <li class="crumb active purple-unicorn"><a><em>Parallelization</em></a></li>
+    </ul>
+  </nav>
+
+  <section class="single" id="purple-unicorn">
+    <article>
+
+      <img alt="Vancouver Convention Center (2014) &copy; Dane Aleksander" src="../../inc/img/photograph/vancouver-convention-centre.2014.1024-256.jpg" />
+      <p class="text-right gutter-side">Vancouver Convention Center, 2014</p>
+
+      <div>
+        <h4 class="letterhead thin">August 2014</h4>
+        <h2 class="purple-unicorn">SIGGRAPH 2014</h2>
+        <h5 class="author"><a href="../../url/git/danealeksander/" rel="author" target="_blank" title="Dane Aleksander, graphic artist.">Dane Aleksander</a>&mdash;creature effects artist in&hellip; Vancouver, British Columbia.</h5>
+
+        <p class="linebreak"><em>An advance in technology. Software tools are designed and developed for artists to explore their creativity. The art goes too far, and the technology breaks. An advance in technology.</em></p>
+
+      </div>
+
+      <img alt="Orca, Vancouver Convention Center (2014) &copy; Dane Aleksander" src="../../inc/img/photograph/vancouver-convention-centre.orca.2014.1024-256.jpg" />
+      <p class="text-right gutter-side"><em>Orca</em>, Vancouver Convention Center, 2014</p>
+
+      <div>
+        <h3><b class="text-quote">&ldquo;</b>Parallelization<b class="text-quote">&rdquo;</b></h3>
+        <p>We live in a time where computer-graphics lend creative freedom to the visual development industry. As artists have explored and exhausted countless versions of software and hardware in a history of workstations, we too continue to develop our workflow for more creative iteration. At SIGGRAPH, advances in CPU and GPU technology showcased an influence on the animation and VFX pipeline, and the mentality; <em>redesign with parallelism in mind.</em></p>
+
+        <p class="linebreak">Dreamworks Animation, Rhythm and Hues, and Animal Logic presented technical-directions that have served to optimize their respective animation pipelines. I was most impressed with Guido Zimmerman's step back in production on Dreamworks Animation proprietary software, <em>Premo</em>, to develop a tool to better understand the state of their rig's performance.</p>
+
+        <p class="linebreak">The tool measured per-frame evaluation of a rig, including read-run-write times for each node and visual feedback on dependency ordering within the evaluation of the rig's node hierarchy. Zimmerman could apply the efficiency logic of a <em>critical path</em> to then influence the structure of a rig's node network derived from the more natural, hierarchical representation. Dreamworks proceeded to redesign their rig pipeline with parallelism in mind. By sectioning serial chain evaluations across parallel threads, the animation team saw a 10x performance boost on the full-resolution Toothless character rig by the end of production on <em>Dragons 2</em>.<sup>&nbsp;[<a class="button" onclick="fn();" title="Animation Mentor">1</a>]</sup></p>
+
+      </div>
+
+      <img alt="" src="//periwinkle.blue/dane/inc/uploads/~/dreamworks-animation/how-to-train-your-dragon-2.2014.jpg" />
+      <p class="text-right gutter-side"><em>How to Train Your Dragon 2</em> (2014) &copy; Dreamworks Animation</p>
+
+      <div>
+        <p>Rhythm and Hues, Animal Logic, and Dreamworks anew continued with presentations on eliminating weight-painting from their respective pipelines while maximizing physically-based, art-directable animation rigs. A commonality was the procedural approach to the development of muscle systems and anatomical libraries. These lay the foundation for tools within which the artist can efficiently assemble a sophisticated starting point for character animation.</p>
+
+        <p class="linebreak">Tuesday morning, Double Negative presented a <em>Creature Feature</em> on the VFX of <em>Hercules</em> (2014) with particular focus on their node-based framework for hair simulation and rendering: Furball. While their physical simulation was rooted on select guide hairs in Houdini, D-Neg have developed Furball to enable parallel computation on both the CPU and GPU, specifically for the large network of relatively independent and uniform curve primitives, aka all the hairs. Hybrid CPU and GPU approaches are often limited by inefficiencies in data transfer between the architectures. However, D-Neg designed a dual-implementation for each data object, with the <em>Furball</em> framework handling CPU and GPU conversions.<sup>&nbsp;[<a class="button" onclick="fn();" title="FX Guide">2</a>]</sup></p>
+
+        <p class="linebreak">Use of the GPU allowed artists on Hercules to groom the lion in real-time.</p>
+
+        <p class="linebreak">Weta, too, showcased their integration of parallelism in a new facial engine software: <em>Swordfish</em>. Its node-based, hierarchical semi-separated (HSS) representation of the scene served to merge additive nodes, minimize the read/write data-flow and stabilize the memory footprint. Character animators at Weta now have access to full-resolution blend-shapes and full characters rigs during crowd simulations, without a data bottleneck.</p>
+
+        <p class="linebreak">Walking away from the conference, the inconvenience of proprietary software is more often outweighed by inspiring stories of journeys within the studios. As was Elliot Kotek's belief on storytelling back in his keynote presentation: to tell stories that &ldquo;take scientific and technical concepts and present them in a way that might be interesting, because relatability is the key to scalability.&rdquo;<sup>&nbsp;[<a class="button" onclick="fn();" title="Elliot Kotek">3</a>]</sup></p>
+
+      </div>
+
+      <img alt="" src="//periwinkle.blue/dane/inc/uploads/~/double-negative/hercules.2014.jpg" />
+      <p class="text-right gutter-side"><em>Hercules</em> (2014) &copy; Double Negative</p>
+
+      <div>
+        <p>Let's close with a thought on animation.</p>
+
+        <p class="linebreak">The Computer Animation Festival at SIGGRAPH is two hours of back-to-back animation. Best in show from the past year, and visual effects in feature films play a significant role. While visual effects breakdowns are very cool, they offer a much different aesthetic than the narrative of an animated short. Art-driven and often independent stories stand out to me, personally, and in 2014 in particular the stand-out short film was <em>The Dam Keeper</em> (2014).</p>
+
+      </div>
+
+      <img alt="" src="//periwinkle.blue/dane/inc/uploads/~/tonko-house/the-dam-keeper.1.2014.jpg" />
+      <p class="text-right gutter-side"><em>The Dam Keeper</em> (2014) &copy; Tonko House [<a href="//thedamkeeper.com/" title="Tonko House / The Dam Keeper" target="_blank" rel="noopener">thedamkeeper.com</a>]</p>
+
+      <div>
+        <h3 class="color">Painterly Characters for Animation</h3>
+        <p>In a similar session last year, Pierre Bénard presented a method that allows an artist to paint-over portions of keyframes, and benefit from predicted and bi-directional in-betweens. His paper titled, <em>Stylizing Animation by Example</em> offered a practical, inspirational step forward in maintaining the stylistic continuity of animated, painterly characters.<sup>&nbsp;[<a class="button" onclick="fn();" title="Bérnard">4</a>]</sup></p>
+
+        <p class="linebreak">This year, Disney Research came forward with <em>Authoring and Animating Painterly Characters</em></a>, research and development of paint-over tools integrated earlier on, within the 3D animation pipeline. The timeline in Maya drives temporal keyframes on a proxy mesh, and artists can layer a range of visual styles using brush stokes that <em>loosely</em> bind to the character rig. They proposed an algorithm using per-frame scene variables like rig parameters and lighting information to then interpolate a <em>configuration-space</em> keyframe. It is in this configuration-space that the stroke effects are manipulated.<sup>&nbsp;[<a class="button" onclick="fn();" title="Bassette">5</a>]</sup></p>
+
+        <p class="linebreak">The five-day SIGGRAPH calender is often brimming with concurrent events. Too many good options is a good problem to have though, and with all attendees navigating their select pathway of panels and presentations, the conference allows for a variety of individual takeaways.</p>
+
+        <p class="linebreak lineend">My selection of panels unfortunately had me skip over the production session for <em>The Dam Keeper</em>, however the extended trailer played in the Computer Animation Festival. Both the art and narrative displayed wonderful character, and it is clearly an early culmination of the recent innovations in visual styles for painterly character animation with smooth, controllable results. I am perhaps most anticipating the technical papers on non-photorealistic rendering in coming years, and am watching to see their influence on the animation industry.</p>
+
+        <div class="color quote">
+          <h4><font class="color text-quote">&ldquo;</font><em>[...] one piece of technology, or that one action of helping someone can inspire someone else to do the same. Help one. Help many.</em><font class="color text-quote">&rdquo;</font> <font class="color thin">&mdash;&nbsp;Elliot Kotek, SIGGRAPH Keynote (2014)</font></h4>
+
+        </div>
+
+      </div>
+
+      <div class="quote" id="footnotes">
+        <p class="small"><sup>1</sup> Animation Mentor. Animating Toothless: Insider Tips from How To Train Your Dragon 2. <a href="../../url/com/animationmentor-animating-toothless/" title="Animation Mentor / Animating Toothless: Insider Tips from How To Train Your Dragon 2" target="_blank" rel="noopener">Website Link</a></p>
+        <p class="small"><sup>2</sup> FX Guide. Legend or Truth: The VFX of Hercules. <a href="../../url/com/fxguide-the-vfx-of-hercules/" title="FX Guide / Legend or Truth: The VFX of Hercules" target="_blank" rel="noopener">Website Link</a></p>
+        <p class="small"><sup>3</sup> Elliot Kotek. SIGGRAPH Keynote: Technology for Humanity, 2014. <a href="../../url/yt/3fuPcdLAbKI/" title="YouTube / Elliot Kotek / Technology for Humanity, SIGGRAPH 2014" target="_blank" rel="noopener">Video Link</a></p>
+        <p class="small"><sup>4</sup> Pixar, Pierre Bénard. Stylizing Animation By Example, 2013. <a href="../../url/vimeo/64407522/" title="Vimeo / Pierre Bénard / Stylizing Animation by Example" target="_blank" rel="noopener">Video Link</a><a href="../../url/com/pixar-graphics-pierre-benard/" title="Pixar / Pierre Bénard, Stylizing Animation by Example" target="_blank" rel="noopener">Website Link</a></p>
+        <p class="small"><sup>5</sup> Katie Bassett et al., Authoring and animating painterly characters, 2013. <a href="../../url/acm/2484238/" title="YouTube / Elliot Kotek / Technology for Humanity, SIGGRAPH 2014" target="_blank" rel="noopener">Video Link</a></p>
+
+      </div>
+
+      <div class="clear navigation post-navigation" role="navigation">
+        <div class="nav-links">
+          <a class="nav-previous" href="../siggraph-2013/" rel="prev"><font class="mobile">Previous Article /</font><font class="desktop">SIGGRAPH 2013 &ndash; Art-direction /</font></a>
+          <a class="nav-next" href="../oatley-academy-and-schoolism/" rel="next"><font class="mobile">/ Next Article</font><font class="desktop">/ Oatley Academy and Schoolism</font></a>
+        </div>
+      </div>
+
+    </article><br class="clear">
+  </section>
+
+  <footer>
+
+      <div class="quote">
+        <p class="small">Copyright &copy; 2014 Dane Aleksander. <a href="../../c/" target="_blank" title="Terms at Animat Habitat">Terms of Access</a>.</p>
+
+      </div>
+
+  </footer>
+
+</body>
+
+<script>
+
+  function fn() { document.querySelector( "#footnotes" ).scrollIntoView({ behavior: 'smooth' }); };
+
+</script>
+
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.85 128">
+  <title>play</title>
+  <g>
+    <polygon points="110.85 64 55.43 96 55.43 32 110.85 64" style="fill: #f99e43"/>
+    <polygon points="55.43 32 0 64 0 0 55.43 32" style="fill: #ffefc0"/>
+    <polygon points="0 64 55.43 32 55.43 96 0 64" style="fill: #972890"/>
+    <polygon points="55.43 96 0 128 0 64 55.43 96" style="fill: #ed1c7f"/>
+  </g>
+</svg>
