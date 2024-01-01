@@ -82,18 +82,26 @@ a:hover .periwinkle-unicorn {
 #periwinkle-unicorn aside.color {
   background: var(--periwinkle-v);
 }
+#rainbow-unicorn form.periwinkle-unicorn button,
 #periwinkle-unicorn button,
 #periwinkle-unicorn a:hover > div.color,
 #periwinkle-unicorn #soci a img,
 div.periwinkle-unicorn {
   background: var(--periwinkle-iv);
 }
+#rainbow-unicorn form.periwinkle-unicorn button:hover,
 #periwinkle-unicorn button:hover,
 div.periwinkle-unicorn:hover {
   background: var(--periwinkle-iii);
 }
 #periwinkle-unicorn pre.thin {
   border: var(--periwinkle-v) thin solid;
+}
+#rainbow-unicorn nav .page li.active em {
+  color: var(--dark-ii);
+}
+#rainbow-unicorn nav .page li.active {
+  background: var(--periwinkle);
 }
 nav ul li.periwinkle-unicorn {
   border-color: var(--periwinkle);
