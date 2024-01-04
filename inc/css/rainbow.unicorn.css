@@ -154,6 +154,9 @@ div.purple-unicorn:hover {
 #purple-unicorn pre.thin {
   border: var(--purple-v) thin solid;
 }
+#rainbow-unicorn nav .page li.active.purple-unicorn {
+  background: var(--purple);
+}
 nav ul li.purple-unicorn {
   border-color: var(--purple);
 }
@@ -203,6 +206,9 @@ div.pink-unicorn:hover {
 }
 #pink-unicorn pre.thin {
   border: var(--pink-v) thin solid;
+}
+#rainbow-unicorn nav .page li.active.pink-unicorn {
+  background: var(--pink);
 }
 nav ul li.pink-unicorn {
   border-color: var(--pink);
@@ -254,6 +260,9 @@ div.orange-unicorn:hover {
 #orange-unicorn pre.thin {
   border: var(--orange-v) thin solid;
 }
+#rainbow-unicorn nav .page li.active.orange-unicorn {
+  background: var(--orange);
+}
 nav ul li.orange-unicorn {
   border-color: var(--orange);
 }
@@ -304,6 +313,9 @@ div.yellow-unicorn:hover {
 }
 #yellow-unicorn pre.thin {
   border: var(--yellow-v) thin solid;
+}
+#rainbow-unicorn nav .page li.active.yellow-unicorn {
+  background: var(--yellow);
 }
 nav ul li.yellow-unicorn {
   border-color: var(--yellow);
