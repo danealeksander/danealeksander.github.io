@@ -35,9 +35,9 @@
     <h1><font class="periwinkle-unicorn">Dane Aleksander</font></h1>
     <h3><a class="overscore" href="//periwinkle.blue" title="Periwinkle Blue"><font class="periwinkle-unicorn">periwinkle.blue</font></a> &middot;&nbsp;Art Commissions</h3>
 
-    <h5 class="linebreak periwinkle-unicorn">Art to inspire conservation of the wild places and the animals that live in them.</h5>
-    <h5>And to create images for wild stories imagined by people like you.</h5>
-    <h5 class="linebreak small">Graphic artist in Kjipuktuk&mdash;<em>the great harbour</em>&mdash;Halifax, Canada.</h5>
+    <h5 class="linebreak">Art to inspire conservation of the wild places and the animals that live in them.</h5>
+    <h5 class="periwinkle-unicorn">And to create images for wild stories imagined by people like you.</h5>
+    <h5 class="linebreak small">Graphic artist in Kjipuktuk&mdash;<i>the great harbour</i>&mdash;Halifax, Canada.</h5>
 
   </div>
 
@@ -69,6 +69,9 @@
       </div>
 
       <div class="quote">
+        <h3><a class="periwinkle-unicorn" href="commission/periwinkle-blue-laurel-mark-1/" title="Periwinkle Blue Laurel">Periwinkle Blue <font class="clear desktop">&ndash;&nbsp;Logomark</font></a></h3>
+        <pre class="thin"></pre>
+
         <h3><a class="periwinkle-unicorn" href="commission/last-of-the-big-tuskers-visual-effects/" title="Dane Aleksander commission. Visual effects art of Last of the Big Tuskers (documentary film, 2018).">Last of the Big Tuskers <font class="clear desktop">&ndash;&nbsp;Visual Effects</font></a></h3>
         <pre class="thin"></pre>
 
@@ -76,9 +79,6 @@
         <pre class="thin"></pre>
 
         <h3><a class="periwinkle-unicorn" href="//lastofthebigtuskers.github.io" title="Last of the Big Tuskers (documentary film, 2018).">Last of the Big Tuskers <font class="clear desktop">&ndash;&nbsp;Movie Website</font></a></h3>
-        <pre class="thin"></pre>
-
-        <h3><a class="periwinkle-unicorn" href="commission/gain-music-arts-festival-poster-6-7/" title="Dane Aleksander commission. GAIN Music Arts Festival &ndash; Poster (6, 7).">GAIN Music Arts Festival <font class="clear desktop">&ndash;&nbsp;Poster</font></a></h3>
         <pre class="thin"></pre>
 
         <h3><a class="periwinkle-unicorn" href="commission/boom12-logomark-1/" title="Dane Aleksander commission. Boom12 Logomark.">Boom12 <font class="clear desktop">&ndash;&nbsp;Corporate Mark</font></a></h3>
@@ -90,8 +90,23 @@
         <h3><a class="periwinkle-unicorn" href="//animathabitat.org/canon/" title="Animat Habitat canon.">Animat Habitat <font class="clear desktop">&ndash;&nbsp;Corporate Identity</font></a></h3>
         <pre class="thin"></pre>
 
-        <h3><a class="periwinkle-unicorn" href="commission/dane-aleksander-logomark-1/" title="Dane Aleksander Logomark">Dane Aleksander <font class="clear desktop">&ndash;&nbsp;Logomark</font></a></h3>
-        <pre class="thin"></pre>
+
+        <div class="clear" id="archived-commissions-toggle">
+          <h5 class="linebreak"><a onclick="toggle_archived_commissions();">&plus; Archived Commissions</a></h5>
+          <pre class="thin"></pre>
+
+        </div>
+        <div class="clear" id="archived-commissions">
+
+          <h5 class="linebreak"><a onclick="toggle_archived_commissions();">&minus; Archived Commissions</a></h5>
+
+          <h3><a class="periwinkle-unicorn" href="commission/gain-music-arts-festival-poster-6-7/" title="Dane Aleksander commission. GAIN Music Arts Festival &ndash; Poster (6, 7).">GAIN Music Arts Festival <font class="clear desktop">&ndash;&nbsp;Poster</font></a></h3>
+          <pre class="thin"></pre>
+
+          <h3><a class="periwinkle-unicorn" href="commission/dane-aleksander-logomark-1/" title="Dane Aleksander Logomark">Dane Aleksander <font class="clear desktop">&ndash;&nbsp;Logomark</font></a></h3>
+          <pre class="thin"></pre>
+
+        </div>
 
         <h5 class="linebreak">Archived Works</h5>
         <h5><a class="orange-unicorn" href="folio/2010-2014/" title="Dane Aleksander, graphic designer and technical-director of animation.">Archive: Student to Studio Animation</a> &middot; <a class="yellow-unicorn" href="art/" title="Dane Aleksander, wildlife painter.">Artbook</a> &middot; <a class="pink-unicorn" href="article/" title="Dane Aleksander, unicorn designer.">Articles</a></h5>
@@ -100,7 +115,7 @@
       </div>
 
       <div class="color quote">
-        <h4><font class="color text-quote">&ldquo;</font><em>The soul of an artist laid bare across the narrative of a body of work.</em><font class="color text-quote">&rdquo;</font></h4>
+        <h4><font class="color text-quote">&ldquo;</font><i>The soul of an artist laid bare across the narrative of a body of work.</i><font class="color text-quote">&rdquo;</font></h4>
 
       </div>
 
@@ -163,6 +178,22 @@
     script.type = "text/javascript";
 
     document.body.appendChild(script);
+  };
+
+  var archive = document.getElementById( "archived-commissions" ),
+      archive_toggle = document.getElementById( "archived-commissions-toggle" );
+
+  archive.style.display = "none";
+
+  function toggle_archived_commissions() {
+    if (archive.style.display == "none") {
+      archive.style.display = "block";
+      archive_toggle.style.display = "none";
+    }
+    else {
+      archive.style.display = "none";
+      archive_toggle.style.display = "block";
+    }
   };
 
   // function go_to_form() {
