@@ -40,77 +40,114 @@
 
 /* **********  ALT COLOR */
 
-.trim {
-  border: var(--dark) thin solid;
-}
-
 #rainbow-unicorn,
 #rainbow-unicorn nav,
 #rainbow-unicorn article,
 #rainbow-unicorn aside,
 #rainbow-unicorn .color div.color,
 #rainbow-unicorn::-webkit-scrollbar-track {
-  background: var(--dark-ii);
+  background-color: var(--dark-ii);
+}
+
+.matte-thin {
+  border-color: var(--dark);
 }
 
 
 
-/* **********  PERIWINKLE */
+/* ***** **** COLOR - PERIWINKLE */
 
-#periwinkle-unicorn nav em,
+#periwinkle-unicorn nav li:not(.active) a,
+#periwinkle-unicorn div[role="navigation"] a,
 #periwinkle-unicorn a.color,
-#periwinkle-unicorn .navigation a,
+#periwinkle-unicorn b.color,
 #periwinkle-unicorn h1,
 #periwinkle-unicorn h3,
 #periwinkle-unicorn h2.color,
 #periwinkle-unicorn h4.color,
-#periwinkle-unicorn font.color,
-.periwinkle-unicorn,
-li.periwinkle-unicorn.active a,
-li.periwinkle-unicorn a:active,
-li.periwinkle-unicorn a:hover {
+#periwinkle-unicorn h5.color,
+#periwinkle-unicorn font.color {
   color: var(--periwinkle);
 }
+#periwinkle-unicorn div[role="navigation"] a:hover,
 #periwinkle-unicorn a.color:hover,
 #periwinkle-unicorn a:hover .color,
-#periwinkle-unicorn .navigation a:hover,
-a.periwinkle-unicorn:hover,
-a:hover .periwinkle-unicorn {
+#periwinkle-unicorn li.color a {
   color: var(--periwinkle-ii);
 }
+#periwinkle-unicorn h3:not(.subtitle) .fr,
+#periwinkle-unicorn h5.color .fr,
+#periwinkle-unicorn font.color .fr {
+  color: var(--periwinkle-iii);
+}
+#periwinkle-unicorn li.btn:hover a,
+#periwinkle-unicorn nav ul.page li.active a,
+#periwinkle-unicorn nav ul.page li.scene a {
+  color: var(--dark-ii);
+}
+
+#periwinkle-unicorn,
+#periwinkle-unicorn nav,
+#periwinkle-unicorn article,
+#periwinkle-unicorn .color div.color {
+  background-color: var(--dark-ii);
+}
 #periwinkle-unicorn div.color,
-#periwinkle-unicorn aside.color {
-  background: var(--periwinkle-v);
+#periwinkle-unicorn #scene {
+  background-color: var(--periwinkle-v);
 }
-#rainbow-unicorn form.periwinkle-unicorn button,
 #periwinkle-unicorn button,
+#periwinkle-unicorn input[type="submit"],
 #periwinkle-unicorn a:hover > div.color,
-#periwinkle-unicorn #soci a img,
-div.periwinkle-unicorn {
-  background: var(--periwinkle-iv);
+#periwinkle-unicorn #soci a img {
+  background-color: var(--periwinkle-iv);
 }
-#rainbow-unicorn form.periwinkle-unicorn button:hover,
 #periwinkle-unicorn button:hover,
-div.periwinkle-unicorn:hover {
-  background: var(--periwinkle-iii);
+#periwinkle-unicorn input[type="submit"]:hover {
+  background-color: var(--periwinkle-iii);
 }
-#periwinkle-unicorn pre.thin {
-  border: var(--periwinkle-v) thin solid;
+#periwinkle-unicorn li.btn a:after,
+#periwinkle-unicorn li.btn.color:before,
+#periwinkle-unicorn nav ul.page li.active a,
+#periwinkle-unicorn nav ul.page li.scene {
+  background-color: var(--periwinkle);
 }
+
+#periwinkle-unicorn pre.thin,
+#periwinkle-unicorn .matte-thin {
+  border-color: var(--periwinkle-v);
+}
+#periwinkle-unicorn .matte {
+  border-color: var(--periwinkle);
+}
+#periwinkle-unicorn nav li.color {
+  border-color: var(--periwinkle);
+}
+
+#periwinkle-unicorn::-webkit-scrollbar-thumb { background: var(--periwinkle); }
+
+
+
 #rainbow-unicorn nav .page li.active em {
   color: var(--dark-ii);
 }
-#rainbow-unicorn nav .page li.active {
-  background: var(--periwinkle);
+
+#rainbow-unicorn form.periwinkle-unicorn button,
+div.periwinkle-unicorn {
+  background-color: var(--periwinkle-iv);
 }
+#rainbow-unicorn form.periwinkle-unicorn button:hover,
+div.periwinkle-unicorn:hover {
+  background-color: var(--periwinkle-iii);
+}
+#rainbow-unicorn nav .page li.active {
+  background-color: var(--periwinkle);
+}
+
 nav ul li.periwinkle-unicorn {
   border-color: var(--periwinkle);
 }
 
-#rainbow-unicorn::-webkit-scrollbar-thumb,
-#periwinkle-unicorn::-webkit-scrollbar-thumb {
-  background: var(--periwinkle);
-}
 
 
 
