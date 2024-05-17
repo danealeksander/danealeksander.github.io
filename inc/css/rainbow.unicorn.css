@@ -40,13 +40,99 @@
 
 /* **********  ALT COLOR */
 
+#rainbow-unicorn nav ul li.active a {
+  color: var(--dark-ii);
+}
+
+#rainbow-unicorn nav ul li.color a,
+#rainbow-unicorn a.color,
+#rainbow-unicorn font.color {
+  color: var(--periwinkle);
+}
+#rainbow-unicorn nav ul li.color-purple a,
+#rainbow-unicorn a.color-purple,
+#rainbow-unicorn font.color-purple {
+  color: var(--purple);
+}
+#rainbow-unicorn nav ul li.color-pink a,
+#rainbow-unicorn a.color-pink,
+#rainbow-unicorn font.color-pink {
+  color: var(--pink);
+}
+#rainbow-unicorn nav ul li.color-orange a,
+#rainbow-unicorn a.color-orange,
+#rainbow-unicorn font.color-orange {
+  color: var(--orange);
+}
+#rainbow-unicorn nav ul li.color-yellow a,
+#rainbow-unicorn a.color-yellow,
+#rainbow-unicorn font.color-yellow {
+  color: var(--yellow);
+}
+
+#rainbow-unicorn nav ul li.color:hover a,
+#rainbow-unicorn a.color:hover {
+  color: var(--periwinkle-ii);
+}
+#rainbow-unicorn nav ul li.color-purple:hover a,
+#rainbow-unicorn a.color-purple:hover {
+  color: var(--purple-ii);
+}
+#rainbow-unicorn nav ul li.color-pink:hover a,
+#rainbow-unicorn a.color-pink:hover {
+  color: var(--pink-ii);
+}
+#rainbow-unicorn nav ul li.color-orange:hover a,
+#rainbow-unicorn a.color-orange:hover {
+  color: var(--orange-ii);
+}
+#rainbow-unicorn nav ul li.color-yellow:hover a,
+#rainbow-unicorn a.color-yellow:hover {
+  color: var(--yellow-ii);
+}
+
 #rainbow-unicorn,
 #rainbow-unicorn nav,
 #rainbow-unicorn article,
 #rainbow-unicorn aside,
-#rainbow-unicorn .color div.color,
-#rainbow-unicorn::-webkit-scrollbar-track {
+#rainbow-unicorn .color div.color {
   background-color: var(--dark-ii);
+}
+
+#rainbow-unicorn nav ul li.active.color {
+  background-color: var(--periwinkle);
+}
+#rainbow-unicorn nav ul li.active.color-purple {
+  background-color: var(--purple);
+}
+#rainbow-unicorn nav ul li.active.color-pink {
+  background-color: var(--pink);
+}
+#rainbow-unicorn nav ul li.active.color-orange {
+  background-color: var(--orange);
+}
+#rainbow-unicorn nav ul li.active.color-yellow {
+  background-color: var(--yellow);
+}
+
+#rainbow-unicorn nav ul li.color {
+  border-color: var(--periwinkle);
+}
+#rainbow-unicorn nav ul li.color-purple {
+  border-color: var(--purple);
+}
+#rainbow-unicorn nav ul li.color-pink {
+  border-color: var(--pink);
+}
+#rainbow-unicorn nav ul li.color-orange {
+  border-color: var(--orange);
+}
+#rainbow-unicorn nav ul li.color-yellow {
+  border-color: var(--yellow);
+}
+
+#rainbow-unicorn::-webkit-scrollbar-track {
+  background: var(--dark-ii);
 }
 
 .matte-thin {
@@ -144,35 +230,6 @@ nav ul li.periwinkle-unicorn {
   border-color: var(--periwinkle);
 } */
 
-#rainbow-unicorn nav ul li.active a {
-  color: var(--dark-ii);
-}
-
-#rainbow-unicorn nav ul li.active.purple-unicorn {
-  background: var(--purple);
-}
-#rainbow-unicorn nav ul li.active.pink-unicorn {
-  background: var(--pink);
-}
-#rainbow-unicorn nav ul li.active.orange-unicorn {
-  background: var(--orange);
-}
-#rainbow-unicorn nav ul li.active.yellow-unicorn {
-  background: var(--yellow);
-}
-
-#rainbow-unicorn nav ul li.purple-unicorn {
-  border-color: var(--purple);
-}
-#rainbow-unicorn nav ul li.pink-unicorn {
-  border-color: var(--pink);
-}
-#rainbow-unicorn nav ul li.orange-unicorn {
-  border-color: var(--orange);
-}
-#rainbow-unicorn nav ul li.yellow-unicorn {
-  border-color: var(--yellow);
-}
 
 
 /* **********  PURPLE: rgb(159,0,159) */
