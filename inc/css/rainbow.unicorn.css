@@ -44,49 +44,44 @@
   color: var(--dark-ii);
 }
 
-#rainbow-unicorn nav ul li.color a,
+#rainbow-unicorn nav ul li.color:not(.active) a,
 #rainbow-unicorn a.color,
 #rainbow-unicorn font.color {
   color: var(--periwinkle);
 }
-#rainbow-unicorn nav ul li.color-purple a,
+#rainbow-unicorn nav ul li.color-purple:not(.active) a,
 #rainbow-unicorn a.color-purple,
 #rainbow-unicorn font.color-purple {
   color: var(--purple);
 }
-#rainbow-unicorn nav ul li.color-pink a,
+#rainbow-unicorn nav ul li.color-pink:not(.active) a,
 #rainbow-unicorn a.color-pink,
 #rainbow-unicorn font.color-pink {
   color: var(--pink);
 }
-#rainbow-unicorn nav ul li.color-orange a,
+#rainbow-unicorn nav ul li.color-orange:not(.active) a,
 #rainbow-unicorn a.color-orange,
 #rainbow-unicorn font.color-orange {
   color: var(--orange);
 }
-#rainbow-unicorn nav ul li.color-yellow a,
+#rainbow-unicorn nav ul li.color-yellow:not(.active) a,
 #rainbow-unicorn a.color-yellow,
 #rainbow-unicorn font.color-yellow {
   color: var(--yellow);
 }
 
-#rainbow-unicorn nav ul li.color:hover a,
 #rainbow-unicorn a.color:hover {
   color: var(--periwinkle-ii);
 }
-#rainbow-unicorn nav ul li.color-purple:hover a,
 #rainbow-unicorn a.color-purple:hover {
   color: var(--purple-ii);
 }
-#rainbow-unicorn nav ul li.color-pink:hover a,
 #rainbow-unicorn a.color-pink:hover {
   color: var(--pink-ii);
 }
-#rainbow-unicorn nav ul li.color-orange:hover a,
 #rainbow-unicorn a.color-orange:hover {
   color: var(--orange-ii);
 }
-#rainbow-unicorn nav ul li.color-yellow:hover a,
 #rainbow-unicorn a.color-yellow:hover {
   color: var(--yellow-ii);
 }
@@ -160,11 +155,6 @@
 #periwinkle-unicorn a:hover .color,
 #periwinkle-unicorn li.color a {
   color: var(--periwinkle-ii);
-}
-#periwinkle-unicorn h3:not(.subtitle) .fr,
-#periwinkle-unicorn h5.color .fr,
-#periwinkle-unicorn font.color .fr {
-  color: var(--periwinkle-iii);
 }
 #periwinkle-unicorn li.btn:hover a,
 #periwinkle-unicorn nav ul.page li.active a,
