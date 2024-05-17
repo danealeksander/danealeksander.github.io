@@ -117,10 +117,8 @@
 #periwinkle-unicorn .matte-thin {
   border-color: var(--periwinkle-v);
 }
+#periwinkle-unicorn nav li.color,
 #periwinkle-unicorn .matte {
-  border-color: var(--periwinkle);
-}
-#periwinkle-unicorn nav li.color {
   border-color: var(--periwinkle);
 }
 
@@ -128,9 +126,7 @@
 
 
 
-#rainbow-unicorn nav .page li.active em {
-  color: var(--dark-ii);
-}
+/*
 
 #rainbow-unicorn form.periwinkle-unicorn button,
 div.periwinkle-unicorn {
@@ -146,55 +142,87 @@ div.periwinkle-unicorn:hover {
 
 nav ul li.periwinkle-unicorn {
   border-color: var(--periwinkle);
+} */
+
+#rainbow-unicorn nav ul li.active a {
+  color: var(--dark-ii);
 }
 
+#rainbow-unicorn nav ul li.active.purple-unicorn {
+  background: var(--purple);
+}
+#rainbow-unicorn nav ul li.active.pink-unicorn {
+  background: var(--pink);
+}
+#rainbow-unicorn nav ul li.active.orange-unicorn {
+  background: var(--orange);
+}
+#rainbow-unicorn nav ul li.active.yellow-unicorn {
+  background: var(--yellow);
+}
 
+#rainbow-unicorn nav ul li.purple-unicorn {
+  border-color: var(--purple);
+}
+#rainbow-unicorn nav ul li.pink-unicorn {
+  border-color: var(--pink);
+}
+#rainbow-unicorn nav ul li.orange-unicorn {
+  border-color: var(--orange);
+}
+#rainbow-unicorn nav ul li.yellow-unicorn {
+  border-color: var(--yellow);
+}
 
 
 /* **********  PURPLE: rgb(159,0,159) */
 
-#purple-unicorn nav em,
+#purple-unicorn nav li:not(.active) a,
+#purple-unicorn div[role="navigation"] a,
 #purple-unicorn a.color,
-#purple-unicorn .navigation a,
+#purple-unicorn b.color,
 #purple-unicorn h1,
 #purple-unicorn h3,
 #purple-unicorn h2.color,
 #purple-unicorn h4.color,
-#purple-unicorn font.color,
-.purple-unicorn,
-li.purple-unicorn.active a,
-li.purple-unicorn a:active,
-li.purple-unicorn a:hover {
+#purple-unicorn h5.color,
+#purple-unicorn font.color {
   color: var(--purple);
 }
+#purple-unicorn div[role="navigation"] a:hover,
 #purple-unicorn a.color:hover,
 #purple-unicorn a:hover .color,
-#purple-unicorn .navigation a:hover,
-a.purple-unicorn:hover,
-a:hover .purple-unicorn {
+#purple-unicorn li.color a {
   color: var(--purple-ii);
 }
+
 #purple-unicorn div.color,
-#purple-unicorn aside.color {
-  background: var(--purple-v);
+#purple-unicorn #scene {
+  background-color: var(--purple-v);
 }
 #purple-unicorn button,
+#purple-unicorn input[type="submit"],
 #purple-unicorn a:hover > div.color,
-#purple-unicorn #soci a img,
-div.purple-unicorn {
-  background: var(--purple-iv);
+#purple-unicorn #soci a img {
+  background-color: var(--purple-iv);
 }
 #purple-unicorn button:hover,
-div.purple-unicorn:hover {
-  background: var(--purple-iii);
+#purple-unicorn input[type="submit"]:hover {
+  background-color: var(--purple-iii);
 }
-#purple-unicorn pre.thin {
-  border: var(--purple-v) thin solid;
+#purple-unicorn li.btn a:after,
+#purple-unicorn li.btn.color:before,
+#purple-unicorn nav ul.page li.active a,
+#purple-unicorn nav ul.page li.scene {
+  background-color: var(--purple);
 }
-#rainbow-unicorn nav .page li.active.purple-unicorn {
-  background: var(--purple);
+
+#purple-unicorn pre.thin,
+#purple-unicorn .matte-thin {
+  border-color: var(--purple-v);
 }
-nav ul li.purple-unicorn {
+#purple-unicorn nav li.color,
+#purple-unicorn .matte {
   border-color: var(--purple);
 }
 
@@ -206,48 +234,52 @@ nav ul li.purple-unicorn {
 
 /* **********  PINK: rgb(255,0,127) */
 
-#pink-unicorn nav em,
+#pink-unicorn nav li:not(.active) a,
+#pink-unicorn div[role="navigation"] a,
 #pink-unicorn a.color,
-#pink-unicorn .navigation a,
+#pink-unicorn b.color,
 #pink-unicorn h1,
 #pink-unicorn h3,
 #pink-unicorn h2.color,
 #pink-unicorn h4.color,
-#pink-unicorn font.color,
-.pink-unicorn,
-li.pink-unicorn.active a,
-li.pink-unicorn a:active,
-li.pink-unicorn a:hover {
+#pink-unicorn h5.color,
+#pink-unicorn font.color {
   color: var(--pink);
 }
+#pink-unicorn div[role="navigation"] a:hover,
 #pink-unicorn a.color:hover,
 #pink-unicorn a:hover .color,
-#pink-unicorn .navigation a:hover,
-a.pink-unicorn:hover,
-a:hover .pink-unicorn {
+#pink-unicorn li.color a {
   color: var(--pink-ii);
 }
+
 #pink-unicorn div.color,
-#pink-unicorn aside.color {
-  background: var(--pink-v);
+#pink-unicorn #scene {
+  background-color: var(--pink-v);
 }
 #pink-unicorn button,
-#pink-unicorn #soci a img,
+#pink-unicorn input[type="submit"],
 #pink-unicorn a:hover > div.color,
-div.pink-unicorn {
-  background: var(--pink-iv);
+#pink-unicorn #soci a img {
+  background-color: var(--pink-iv);
 }
 #pink-unicorn button:hover,
-div.pink-unicorn:hover {
-  background: var(--pink-iii);
+#pink-unicorn input[type="submit"]:hover {
+  background-color: var(--pink-iii);
 }
-#pink-unicorn pre.thin {
-  border: var(--pink-v) thin solid;
+#pink-unicorn li.btn a:after,
+#pink-unicorn li.btn.color:before,
+#pink-unicorn nav ul.page li.active a,
+#pink-unicorn nav ul.page li.scene {
+  background-color: var(--pink);
 }
-#rainbow-unicorn nav .page li.active.pink-unicorn {
-  background: var(--pink);
+
+#pink-unicorn pre.thin,
+#pink-unicorn .matte-thin {
+  border-color: var(--pink-v);
 }
-nav ul li.pink-unicorn {
+#pink-unicorn nav li.color,
+#pink-unicorn .matte {
   border-color: var(--pink);
 }
 
@@ -259,48 +291,52 @@ nav ul li.pink-unicorn {
 
 /* **********  ORANGE: rgb(255,159,64) */
 
-#orange-unicorn nav em,
+#orange-unicorn nav li:not(.active) a,
+#orange-unicorn div[role="navigation"] a,
 #orange-unicorn a.color,
-#orange-unicorn .navigation a,
+#orange-unicorn b.color,
 #orange-unicorn h1,
 #orange-unicorn h3,
 #orange-unicorn h2.color,
 #orange-unicorn h4.color,
-#orange-unicorn font.color,
-.orange-unicorn,
-li.orange-unicorn.active a,
-li.orange-unicorn a:active,
-li.orange-unicorn a:hover {
+#orange-unicorn h5.color,
+#orange-unicorn font.color {
   color: var(--orange);
 }
+#orange-unicorn div[role="navigation"] a:hover,
 #orange-unicorn a.color:hover,
 #orange-unicorn a:hover .color,
-#orange-unicorn .navigation a:hover,
-a.orange-unicorn:hover,
-a:hover .orange-unicorn {
+#orange-unicorn li.color a {
   color: var(--orange-ii);
 }
+
 #orange-unicorn div.color,
-#orange-unicorn aside.color {
-  background: var(--orange-v);
+#orange-unicorn #scene {
+  background-color: var(--orange-v);
 }
 #orange-unicorn button,
-#orange-unicorn #soci a img,
+#orange-unicorn input[type="submit"],
 #orange-unicorn a:hover > div.color,
-div.orange-unicorn {
-  background: var(--orange-iv);
+#orange-unicorn #soci a img {
+  background-color: var(--orange-iv);
 }
 #orange-unicorn button:hover,
-div.orange-unicorn:hover {
-  background: var(--orange-iii);
+#orange-unicorn input[type="submit"]:hover {
+  background-color: var(--orange-iii);
 }
-#orange-unicorn pre.thin {
-  border: var(--orange-v) thin solid;
+#orange-unicorn li.btn a:after,
+#orange-unicorn li.btn.color:before,
+#orange-unicorn nav ul.page li.active a,
+#orange-unicorn nav ul.page li.scene {
+  background-color: var(--orange);
 }
-#rainbow-unicorn nav .page li.active.orange-unicorn {
-  background: var(--orange);
+
+#orange-unicorn pre.thin,
+#orange-unicorn .matte-thin {
+  border-color: var(--orange-v);
 }
-nav ul li.orange-unicorn {
+#orange-unicorn nav li.color,
+#orange-unicorn .matte {
   border-color: var(--orange);
 }
 
@@ -312,49 +348,52 @@ nav ul li.orange-unicorn {
 
 /* **********  YELLOW: rgb(255,239,191) */
 
-#yellow-unicorn nav em,
+#yellow-unicorn nav li:not(.active) a,
+#yellow-unicorn div[role="navigation"] a,
 #yellow-unicorn a.color,
-#yellow-unicorn .navigation a,
+#yellow-unicorn b.color,
 #yellow-unicorn h1,
 #yellow-unicorn h3,
 #yellow-unicorn h2.color,
 #yellow-unicorn h4.color,
-#yellow-unicorn font.color,
-.yellow-unicorn,
-li.yellow-unicorn.active a,
-li.yellow-unicorn a:active,
-li.yellow-unicorn a:hover {
+#yellow-unicorn h5.color,
+#yellow-unicorn font.color {
   color: var(--yellow);
 }
+#yellow-unicorn div[role="navigation"] a:hover,
 #yellow-unicorn a.color:hover,
 #yellow-unicorn a:hover .color,
-#yellow-unicorn .navigation a:hover,
-a.yellow-unicorn:hover,
-a:hover .yellow-unicorn {
+#yellow-unicorn li.color a {
   color: var(--yellow-ii);
 }
+
 #yellow-unicorn div.color,
-#yellow-unicorn aside.color {
-  background: var(--yellow-v);
+#yellow-unicorn #scene {
+  background-color: var(--yellow-v);
 }
 #yellow-unicorn button,
-#yellow-unicorn #soci a img,
+#yellow-unicorn input[type="submit"],
 #yellow-unicorn a:hover > div.color,
-div.yellow-unicorn {
-  background: var(--yellow-iv);
+#yellow-unicorn #soci a img {
+  background-color: var(--yellow-iv);
 }
 #yellow-unicorn button:hover,
-#yellow-unicorn .window:hover,
-div.yellow-unicorn:hover {
-  background: var(--yellow-iii);
+#yellow-unicorn input[type="submit"]:hover {
+  background-color: var(--yellow-iii);
 }
-#yellow-unicorn pre.thin {
-  border: var(--yellow-v) thin solid;
+#yellow-unicorn li.btn a:after,
+#yellow-unicorn li.btn.color:before,
+#yellow-unicorn nav ul.page li.active a,
+#yellow-unicorn nav ul.page li.scene {
+  background-color: var(--yellow);
 }
-#rainbow-unicorn nav .page li.active.yellow-unicorn {
-  background: var(--yellow);
+
+#yellow-unicorn pre.thin,
+#yellow-unicorn .matte-thin {
+  border-color: var(--yellow-v);
 }
-nav ul li.yellow-unicorn {
+#yellow-unicorn nav li.color,
+#yellow-unicorn .matte {
   border-color: var(--yellow);
 }
 
