@@ -447,3 +447,37 @@ nav ul li.periwinkle-unicorn {
 #yellow-unicorn::-webkit-scrollbar-thumb {
   background: var(--yellow);
 }
+
+
+
+
+ul.periwinkle-list li {
+  font-size: calc( 4em / 3 );
+  margin-top: 1em;
+}
+ul.periwinkle-list li a {
+  color: #E3E3E3;
+  cursor: default;
+  font-size: calc( 3em / 2 );
+}
+
+
+
+@media only screen
+and ( max-width: 960px ) {
+
+  ul.periwinkle-list li {
+    font-size: 1em;
+  }
+  ul.periwinkle-list li a {
+    font-size: calc( 11em / 9 );
+  }
+}
+
+@media only screen
+and ( max-width: 768px ) {
+
+  ul.periwinkle-list li a {
+    font-size: 1em;
+  }
+}
