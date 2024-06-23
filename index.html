@@ -47,6 +47,11 @@
       <div class="polyptych">
 
         <div class="logo">
+          <img id="jo_" onmouseover="joPlus();" onmouseout="jo_();" alt="Jodi on Edge, logomark (2019) &copy; Dane Aleksander" class="auto" src="inc/svg/client/mono/jo_.mark.1.0.svg" />
+
+        </div>
+
+        <div class="logo">
           <img alt="Last of the Big Tuskers, logomark (2017) &copy; Umboko Productions" class="auto" src="inc/svg/client/mono/last-of-the-big-tuskers.com.mark.1.0.svg" />
 
         </div>
@@ -56,15 +61,20 @@
 
         </div>
 
+        <!-- <div class="logo">
+          <img alt="GAIN Music Arts Festival, logomark (2017) &copy; GAIN Music" class="auto" src="inc/svg/client/mono/gmaf.lettermark.1.0.svg" />
+
+        </div> -->
+
         <div class="logo">
           <img alt="Animat Habitat, logomark (2015) &copy; Animat Habitat" class="auto" src="inc/svg/client/mono/animat.mark.1.0.svg" />
 
         </div>
 
-        <div class="logo">
+        <!-- <div class="logo">
           <img alt="Dane Aleksander, logomark (2014) &copy; Dane Aleksander" class="auto" src="inc/svg/client/mono/dane-aleksander.mark.1.0.svg" />
 
-        </div>
+        </div> -->
 
       </div>
 
@@ -175,6 +185,11 @@
 <script>
 
   document.onload = load_createsend();
+
+  var jo = document.getElementById("jo_")
+
+  function joPlus() { jo.src='inc/ico/jo+.mark.1.svg'; };
+  function jo_() { jo.src='inc/ico/jo_.mark.1.svg'; };
 
   function load_createsend() {
 
