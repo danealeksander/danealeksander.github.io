@@ -197,6 +197,9 @@
 #periwinkle-unicorn .matte {
   border-color: var(--periwinkle);
 }
+#periwinkle-unicorn div.line-left > div {
+  border-color: var(--periwinkle-iii);
+}
 
 #periwinkle-unicorn::-webkit-scrollbar-thumb { background: var(--periwinkle); }
 
@@ -272,6 +275,9 @@ nav ul li.periwinkle-unicorn {
 #purple-unicorn .matte {
   border-color: var(--purple);
 }
+#purple-unicorn div.line-left > div {
+  border-color: var(--purple-iii);
+}
 
 #purple-unicorn::-webkit-scrollbar-thumb {
   background: var(--purple);
@@ -328,6 +334,9 @@ nav ul li.periwinkle-unicorn {
 #pink-unicorn nav li.color,
 #pink-unicorn .matte {
   border-color: var(--pink);
+}
+#pink-unicorn div.line-left > div {
+  border-color: var(--pink-iii);
 }
 
 #pink-unicorn::-webkit-scrollbar-thumb {
@@ -386,6 +395,9 @@ nav ul li.periwinkle-unicorn {
 #orange-unicorn .matte {
   border-color: var(--orange);
 }
+#orange-unicorn div.line-left > div {
+  border-color: var(--orange-iii);
+}
 
 #orange-unicorn::-webkit-scrollbar-thumb {
   background: var(--orange);
@@ -442,6 +454,9 @@ nav ul li.periwinkle-unicorn {
 #yellow-unicorn nav li.color,
 #yellow-unicorn .matte {
   border-color: var(--yellow);
+}
+#yellow-unicorn div.line-left > div {
+  border-color: var(--yellow-iii);
 }
 
 #yellow-unicorn::-webkit-scrollbar-thumb {
