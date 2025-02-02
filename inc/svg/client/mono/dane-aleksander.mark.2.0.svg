@@ -5,7 +5,7 @@
         <g id="pixels">
             <g id="periwinkle">
                 <g transform="matrix(0.03,0,0,0.03,510.08,512.96)">
-                    <path d="M0,-96L0,32L128,32L128,-32L96,-32L96,0L32,0L32,-64L64,-64L64,-96L0,-96Z" style="fill:#E3E3E3;fill-opacity:0.618;fill-rule:nonzero;"/>
+                    <path d="M0,-96L0,32L128,32L128,-32L96,-32L96,0L32,0L32,-64L64,-64L64,-96L0,-96Z" style="fill:#E3E3E3;"/>
                 </g>
                 <g transform="matrix(-0.03,0,0,0.03,536,506.54)">
                     <rect x="768" y="150" width="32" height="32" style="fill:#E3E3E3;"/>
