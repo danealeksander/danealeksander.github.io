@@ -34,7 +34,6 @@
   <div class="quote text-center">
     <h1><font class="">Dane Aleksander</font></h1>
 
-    <!-- <h3>Design&nbsp;to&nbsp;inspire conservation&nbsp;of&nbsp;the&nbsp;wild places and the&nbsp;animals&nbsp;that&nbsp;live&nbsp;in&nbsp;them.</h3> -->
     <h3>Art&nbsp;of&nbsp;imagery for&nbsp;wild&nbsp;stories imagined&nbsp;by&nbsp;people&nbsp;like&nbsp;you.</h3>
 
     <h5 class="linebreak">Graphic artist in Halifax&mdash;Kjipuktuk&mdash;<i>the&nbsp;great&nbsp;harbour</i>.</h5>
@@ -163,14 +162,14 @@
 
         </div>
 
-        <div class="clear" id="archived-folios-toggle">
-          <h5 class="linebreak"><a onclick="toggle_archived_folios();">&plus; Archived Folios</a></h5>
+        <div class="clear" id="archives-toggle">
+          <h5 class="linebreak"><a onclick="toggle_archives();">&plus; Archived Folios</a></h5>
           <pre class="thin"></pre>
 
         </div>
-        <div class="clear" id="archived-folios">
+        <div class="clear" id="archives">
 
-          <h5 class="linebreak"><a class="overscore" onclick="toggle_archived_folios();">&minus; Archived Folios</a></h5>
+          <h5 class="linebreak"><a class="overscore" onclick="toggle_archives();">&minus; Archived Folios</a></h5>
 
           <h5><a class="color-yellow" href="art/" title="Dane Aleksander, wildlife painter.">Artbook</a> &nbsp;<b>&middot;</b>&nbsp; <a class="color-pink" href="folio/2010-2014/" title="Dane Aleksander, graphic designer.">Augmented Reality App Design</a> &nbsp;<b>&middot;</b>&nbsp; <a class="color-orange" href="folio/2010-2014/" title="Dane Aleksander, technical director of animation.">Student to Studio Animation</a></h5>
 
@@ -337,8 +336,8 @@
 
   var archived_commissions = document.getElementById( "archived-commissions" ),
       archived_commissions_toggle = document.getElementById( "archived-commissions-toggle" ),
-      archived_folios = document.getElementById( "archived-folios" ),
-      archived_folios_toggle = document.getElementById( "archived-folios-toggle" ),
+      archives = document.getElementById( "archives" ),
+      archives_toggle = document.getElementById( "archives-toggle" ),
       articles = document.getElementById( "articles" ),
       articles_toggle = document.getElementById( "articles-toggle" ),
       cv = document.getElementById( "cv" ),
@@ -347,7 +346,7 @@
       manifesto = document.getElementById( "manifesto" );
 
   archived_commissions.style.display = "none";
-  archived_folios.style.display = "none";
+  archives.style.display = "none";
   articles.style.display = "none";
   cv.style.display = "none";
   manifesto.style.display = "none";
@@ -363,14 +362,14 @@
     }
   };
 
-  function toggle_archived_folios() {
-    if (archived_folios.style.display == "none") {
-      archived_folios.style.display = "block";
-      archived_folios_toggle.style.display = "none";
+  function toggle_archives() {
+    if (archives.style.display == "none") {
+      archives.style.display = "block";
+      archives_toggle.style.display = "none";
     }
     else {
-      archived_folios.style.display = "none";
-      archived_folios_toggle.style.display = "block";
+      archives.style.display = "none";
+      archives_toggle.style.display = "block";
     }
   };
 
