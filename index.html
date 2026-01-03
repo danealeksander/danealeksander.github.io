@@ -284,7 +284,7 @@
         <div class="clear" id="commission">
 
           <h5 class="linebreak title"><a onclick="toggle_commission();">&minus; <font class="overscore">Commission inquiry</font></a></h5>
-          <h5>Enter your name, e-mail address and a summary of your next wild project.</h5>
+          <h5 class="linebreak">Enter your name, e-mail address and a summary of your next wild project.</h5>
 
           <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A6EEBCAF44DCD266A58661386DC72C9C51ED37BB3F736E3C0A542B11C43BE4E50A9816B88992418980158D641C0C694B5">
 
@@ -328,7 +328,7 @@
         <div class="clear" id="conference">
 
           <h5 class="linebreak title"><a onclick="toggle_conference();">&minus; <font class="overscore">Schedule a call</font></a></h5>
-          <h5>Enter your name and the e-mail address associated with the platform you select.</h5>
+          <h5 class="linebreak">Enter your name and the e-mail address associated with the platform you select.</h5>
 
           <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A18A7F9AB76E74107807B0730A7F9A03143CCFF192AC7B51458917ECB43CD69B52F6B28A1308B5F9FE2CC297A6C075531">
 
@@ -474,6 +474,8 @@
 
   function toggle_commission() {
     if ( commission.style.display == "none" ) {
+      conference.style.display = "none";
+      conference_toggle.style.display = "block";
       commission.style.display = "block";
       commission_toggle.style.display = "none";
       document.querySelector( "#commission" ).scrollIntoView({ behavior: 'smooth' });
@@ -486,6 +488,8 @@
 
   function toggle_conference() {
     if ( conference.style.display == "none" ) {
+      commission.style.display = "none";
+      commission_toggle.style.display = "block";
       conference.style.display = "block";
       conference_toggle.style.display = "none";
       document.querySelector( "#conference" ).scrollIntoView({ behavior: 'smooth' });
