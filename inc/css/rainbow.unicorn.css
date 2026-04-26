@@ -94,9 +94,6 @@
   background-color: var(--dark-ii);
 }
 
-#rainbow-unicorn nav ul li.active.color {
-  background-color: var(--periwinkle);
-}
 #rainbow-unicorn nav ul li.active.color-purple {
   background-color: var(--purple);
 }
@@ -156,7 +153,10 @@
 #periwinkle-unicorn li.color a {
   color: var(--periwinkle-ii);
 }
+#rainbow-unicorn li.btn:hover a,
+#rainbow-unicorn li.btn.color:hover a,
 #periwinkle-unicorn li.btn:hover a,
+#periwinkle-unicorn li.btn.color:hover a,
 #periwinkle-unicorn nav ul.page li.active a,
 #periwinkle-unicorn nav ul.page li.scene a {
   color: var(--dark-ii);
@@ -182,6 +182,9 @@
 #periwinkle-unicorn input[type="submit"]:hover {
   background-color: var(--periwinkle-iii);
 }
+#rainbow-unicorn li.btn a:after,
+#rainbow-unicorn li.btn.color:before,
+#rainbow-unicorn nav ul li.active.color,
 #periwinkle-unicorn li.btn a:after,
 #periwinkle-unicorn li.btn.color:before,
 #periwinkle-unicorn nav ul.page li.active a,
