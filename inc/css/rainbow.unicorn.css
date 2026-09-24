@@ -153,9 +153,12 @@
 #periwinkle-unicorn font.color {
   color: var(--periwinkle);
 }
+#periwinkle-unicorn .periwinkle-list a:hover .color {
+  color: var(--periwinkle) !important;
+}
 #periwinkle-unicorn div[role="navigation"] a:hover,
 #periwinkle-unicorn a.color:hover,
-#periwinkle-unicorn :not(.periwinkle-list) a:hover .color,
+#periwinkle-unicorn a:hover .color,
 #periwinkle-unicorn li.color a {
   color: var(--periwinkle-ii);
 }
