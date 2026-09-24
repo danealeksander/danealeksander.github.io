@@ -1,5 +1,4 @@
 
-
 /* ROOT */
 
 :root {
@@ -156,7 +155,7 @@
 }
 #periwinkle-unicorn div[role="navigation"] a:hover,
 #periwinkle-unicorn a.color:hover,
-#periwinkle-unicorn a:hover .color,
+#periwinkle-unicorn :not(.periwinkle-list) a:hover .color,
 #periwinkle-unicorn li.color a {
   color: var(--periwinkle-ii);
 }
