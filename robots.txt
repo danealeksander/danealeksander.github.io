@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+Disallow: /404.html
+
+Disallow: /b/
+Disallow: /c/
+Disallow: /cgi-bin/
+
+Disallow: /.*/
+Disallow: */.*/
+
+Disallow: /e/
+Disallow: */e/
+
+Disallow: /feed/
+Disallow: */feed/
+
+Disallow: */inc/
+
+
+
+# AI #
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: __usage_ai-training
+Disallow: /
+
+
+
+# Sitemap #
+
+Sitemap: /lifeasplay.ca.sitemap.xml
